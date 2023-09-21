@@ -4,7 +4,7 @@ namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
 
 use SujanSht\LaraAdmin\Http\Controllers\Controller;
 use SujanSht\LaraAdmin\Http\Requests\Auth\LoginRequest;
-use SujanSht\LaraAdmin\Providers\RouteServiceProvider;
+use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended(LaraAdminServiceProvider::HOME);
     }
 
     /**

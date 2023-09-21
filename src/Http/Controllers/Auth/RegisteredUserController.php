@@ -5,7 +5,7 @@ namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
 use SujanSht\LaraAdmin\Http\Controllers\Controller;
 use SujanSht\LaraAdmin\Models\Admin\Role;
 use SujanSht\LaraAdmin\Models\User;
-use SujanSht\LaraAdmin\Providers\RouteServiceProvider;
+use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -51,6 +51,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(LaraAdminServiceProvider::HOME);
     }
 }

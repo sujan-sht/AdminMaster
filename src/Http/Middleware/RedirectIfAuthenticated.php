@@ -2,7 +2,7 @@
 
 namespace SujanSht\LaraAdmin\Http\Middleware;
 
-use SujanSht\LaraAdmin\Providers\RouteServiceProvider;
+use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                return redirect(LaraAdminServiceProvider::HOME);
             }
         }
 

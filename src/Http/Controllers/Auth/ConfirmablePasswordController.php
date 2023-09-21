@@ -3,7 +3,7 @@
 namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
 
 use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Providers\RouteServiceProvider;
+use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,6 +36,6 @@ class ConfirmablePasswordController extends Controller
 
         $request->session()->put('auth.password_confirmed_at', time());
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->intended(LaraAdminServiceProvider::HOME);
     }
 }
