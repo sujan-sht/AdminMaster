@@ -155,7 +155,6 @@ class LaraAdminServiceProvider extends ServiceProvider
     protected function routeConfiguration()
     {
         return [
-            'prefix' => 'admin',
             'middleware' => ['web', 'auth'],
         ];
     }
