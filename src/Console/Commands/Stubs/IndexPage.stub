@@ -1,0 +1,9 @@
+@extends('admin.layouts.app')
+
+@section('content')
+    <x-index-page name="lowercaseModelName" route="pluralModelName">
+        <x-slot name="content">
+            @livewire('admin.lowercaseModelName.lowercaseModelName-table')
+        </x-slot>
+    </x-index-page>
+@endsection

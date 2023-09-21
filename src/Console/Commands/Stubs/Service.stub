@@ -1,0 +1,9 @@
+<?php
+
+namespace App\Services;
+use App\Services\Helper\CommandHelper;
+
+class modelName extends CommandHelper
+{
+
+}

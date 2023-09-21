@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Http\Livewire\Admin\modelName;
+
+use Rappasoft\LaravelLivewireTables\DataTableComponent;
+use Rappasoft\LaravelLivewireTables\Views\Column;
+use App\Models\Admin\modelName;
+use Illuminate\Support\Facades\Blade;
+
+class modelNameTable extends DataTableComponent
+{
+    protected $model = modelName::class;
+
+    public function configure(): void
+    {
+        $this->setPrimaryKey('id');
+        $this->setColumnSelectDisabled();
+    }
+
+    public function columns(): array
+    {
+        return [
+            Column::make("Id", "id")
+                ->searchable(),
+            Column::make("Name", "name")
+                ->sortable()
+                ->searchable(),
+            Column::make("Action")
+                ->label(
+                    fn ($row) => Blade::render('<x-action :model="$model" route="pluralModelName" :show="true" />', ['model' => $row])
+                )
+                ->html(),
+        ];
+    }
+}

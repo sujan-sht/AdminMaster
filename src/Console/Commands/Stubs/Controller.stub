@@ -1,0 +1,79 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Contracts\modelNameRepositoryInterface;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\modelNameRequest;
+use App\Models\Admin\modelName;
+use Illuminate\Http\Request;
+
+class modelNameController extends Controller
+{
+    protected $lowercaseModelNameRepositoryInterface;
+
+    public function __construct(modelNameRepositoryInterface $lowercaseModelNameRepositoryInterface)
+    {
+        $this->lowercaseModelNameRepositoryInterface = $lowercaseModelNameRepositoryInterface;
+        $this->authorizeResource(modelName::class,'lowercaseModelName');
+    }
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        return view('admin.lowercaseModelName.index',$this->lowercaseModelNameRepositoryInterface->indexmodelName());
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('admin.lowercaseModelName.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(modelNameRequest $request)
+    {
+        $this->lowercaseModelNameRepositoryInterface->storemodelName($request);
+        return redirect(adminRedirectRoute('pluralModelName'))->with('message','Successfully Added');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(modelName $lowercaseModelName)
+    {
+        return view('admin.lowercaseModelName.show',$this->lowercaseModelNameRepositoryInterface->showmodelName($lowercaseModelName));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(modelName $lowercaseModelName)
+    {
+        return view('admin.lowercaseModelName.edit',$this->lowercaseModelNameRepositoryInterface->editmodelName($lowercaseModelName));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(modelNameRequest $request, modelName $lowercaseModelName)
+    {
+
+        $this->lowercaseModelNameRepositoryInterface->updatemodelName($request, $lowercaseModelName);
+        return redirect(adminRedirectRoute('pluralModelName'))->with('info','Updated Successfully');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(modelName $lowercaseModelName)
+    {
+        $this->lowercaseModelNameRepositoryInterface->destroymodelName($lowercaseModelName);
+        return redirect(adminRedirectRoute('pluralModelName'))->with('error','Deleted Successfully');
+    }
+}

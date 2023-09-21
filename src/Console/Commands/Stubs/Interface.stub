@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Contracts;
+
+use App\Http\Requests\modelNameRequest;
+use App\Models\Admin\modelName;
+
+interface modelNameRepositoryInterface
+{
+    public function indexmodelName();
+
+    public function createmodelName();
+
+    public function storemodelName(modelNameRequest $request);
+
+    public function showmodelName(modelName $lowercaseModelName);
+
+    public function editmodelName(modelName $lowercaseModelName);
+
+    public function updatemodelName(modelNameRequest $request, modelName $lowercaseModelName);
+
+    public function destroymodelName(modelName $lowercaseModelName);
+}

@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Repositories;
+
+use App\Models\Admin\modelName;
+use App\Contracts\modelNameRepositoryInterface;
+use App\Http\Requests\modelNameRequest;
+
+class modelNameRepository implements modelNameRepositoryInterface
+{
+    // modelName Index
+    public function indexmodelName()
+    {
+        $pluralModelName = modelName::all();
+        return compact('pluralModelName');
+    }
+
+    // modelName Create
+    public function createmodelName()
+    {
+        //
+    }
+
+    // modelName Store
+    public function storemodelName(modelNameRequest $request)
+    {
+        modelName::create($request->validated());
+    }
+
+    // modelName Show
+    public function showmodelName(modelName $lowercaseModelName)
+    {
+        return compact('lowercaseModelName');
+    }
+
+    // modelName Edit
+    public function editmodelName(modelName $lowercaseModelName)
+    {
+        return compact('lowercaseModelName');
+    }
+
+    // modelName Update
+    public function updatemodelName(modelNameRequest $request, modelName $lowercaseModelName)
+    {
+        $lowercaseModelName->update($request->validated());
+    }
+
+    // modelName Destroy
+    public function destroymodelName(modelName $lowercaseModelName)
+    {
+        $lowercaseModelName->delete();
+    }
+}

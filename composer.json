@@ -1,0 +1,63 @@
+{
+    "name": "sujan-sht/lara-admin",
+    "description": "Laravel Admin Panel",
+    "keywords": [
+        "sujan-sht",
+        "lara-admin"
+    ],
+    "homepage": "https://github.com/sujan-sht/lara-admin",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sujan Shrestha",
+            "email": "sujanstha016@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "livewire/livewire": "^2.12",
+        "rappasoft/laravel-livewire-tables": "^2.14",
+        "spatie/laravel-medialibrary": "^10.12"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^9.0",
+        "laravel/breeze": "^1.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "SujanSht\\LaraAdmin\\": "src",
+            "SujanSht\\LaraAdmin\\Database\\Seeders\\": "database/seeders/",
+            "SujanSht\\LaraAdmin\\Mixins\\": "app/Mixins/"
+        },
+        "files": [
+            "src/Helpers/adminRouteHelper.php",
+            "src/Helpers/adminHelper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SujanSht\\LaraAdmin\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SujanSht\\LaraAdmin\\LaraAdminServiceProvider"
+            ],
+            "aliases": {
+                "LaraAdmin": "SujanSht\\LaraAdmin\\LaraAdminFacade"
+            }
+        }
+    }
+}

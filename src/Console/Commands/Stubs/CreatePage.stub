@@ -1,0 +1,9 @@
+@extends('admin.layouts.app')
+
+@section('content')
+<x-create-page name="lowercaseModelName" route="pluralModelName">
+   <x-slot name="content">
+        @include('admin.layouts.modules.lowercaseModelName.form')
+   </x-slot>
+</x-create-page>
+@endsection
