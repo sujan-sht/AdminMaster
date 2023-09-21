@@ -9,7 +9,7 @@ class CommandHelper
 {
     public static function getStub($type)
     {
-        return file_get_contents(app_path("Console/Commands/Stubs/$type.stub"));
+        return file_get_contents(__DIR__."/../../Console/Commands/Stubs/$type.stub");
     }
 
     public static function createFolderIfNotExists($folderPath)

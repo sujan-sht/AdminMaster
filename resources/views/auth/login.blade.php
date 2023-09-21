@@ -3,10 +3,10 @@
 
 <!-- Mirrored from w3crm.dexignzone.com/xhtml/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 May 2023 09:14:23 GMT -->
 <head>
-    @include('admin.layouts.components.assets.meta')
+    @include('lara-admin::admin.layouts.components.assets.meta')
 
 
-    @include('admin.layouts.components.assets.links')
+    @include('lara-admin::admin.layouts.components.assets.links')
 
 </head>
 <body class="authentication-bg pb-0">
@@ -17,7 +17,7 @@
             <div class="align-items-center d-flex h-100">
                 <div class="card-body">
 
-                    @include('auth.components.logo')
+                    @include('lara-admin::auth.components.logo')
 
                     <!-- title-->
                     <h4 class="mt-0">Sign In</h4>
@@ -109,7 +109,7 @@
     </div>
 
 
-    @include('admin.layouts.components.assets.scripts')
+    @include('lara-admin::admin.layouts.components.assets.scripts')
 
 
 

@@ -104,7 +104,7 @@ class LaraAdminServiceProvider extends ServiceProvider
      */
     protected function publishResource()
     {
-       
+
         // Publish View Files
         $this->publishes([
             __DIR__.'/../../resources/views' => resource_path('views/vendor/lara-admin'),
@@ -120,7 +120,7 @@ class LaraAdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../payload/lara-admin/assets' => public_path('lara-admin/assets'),
         ], 'lara-admin-assets-files');
-        
+
     }
 
     /**
@@ -142,9 +142,9 @@ class LaraAdminServiceProvider extends ServiceProvider
      */
     protected function registerRoutes()
     {
-        Route::group($this->routeConfiguration(), function () {
+        // Route::group($this->routeConfiguration(), function () {
             $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
-        });
+        // });
     }
 
     /**
@@ -189,7 +189,7 @@ class LaraAdminServiceProvider extends ServiceProvider
 
             return $hasAccess;
         });
-       
+
     }
 
     /**
@@ -205,7 +205,7 @@ class LaraAdminServiceProvider extends ServiceProvider
         $this->app->bind(PermissionRepositoryInterface::class, PermissionRepository::class);
     }
 
-   
+
 
     /**
      * Register View Components.

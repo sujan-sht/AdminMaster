@@ -16,6 +16,11 @@ class CrudService extends CommandHelper
         Self::createFolderIfNotExists(resource_path('views/admin/'.strtolower($name)));
         Self::createFolderIfNotExists(app_path("Http/Livewire/Admin/".$name));
         Self::createFolderIfNotExists(app_path("Policies"));
+        Self::createFolderIfNotExists(app_path("Mixins"));
+        Self::createFolderIfNotExists(app_path("Contracts"));
+        Self::createFolderIfNotExists(app_path("Repositories"));
+
+
 
 
         Self::makeModel($name, $console);
@@ -110,6 +115,10 @@ class CrudService extends CommandHelper
 
     protected static function addRouteContent($name, $console)
     {
+        $file = app_path("Mixins/AdminRouteMixins.php");
+        if(!file_exists($file)){
+            file_put_contents($file, Self::getStub('AdminRouteMixins'));
+        }
         // Adding Route
         $lowercased_name = strtolower(Str::plural($name));
         $route = "Route::resource('{$lowercased_name}',\App\Http\Controllers\Admin\\{$name}Controller::class);\n";
@@ -135,8 +144,13 @@ class CrudService extends CommandHelper
 
     protected static function addFileContent($name, $console)
     {
+        $file = app_path("Providers/AdminServiceProvider.php");
+        if(!file_exists($file)){
+            file_put_contents($file, Self::getStub('AdminServiceProvider'));
+        }
         // Adding Route Interface Binding
         $repository_interface_binding = '$this->app->bind(\App\Contracts\\'.$name.'RepositoryInterface::class, \App\Repositories\\'.$name.'Repository::class);';
+
         $provider_path = app_path('Providers/AdminServiceProvider.php');
         Self::putContentToClassFunction($provider_path, 'protected function repos', $repository_interface_binding);
 
