@@ -31,6 +31,6 @@ class EditPage extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.edit-page');
+        return view('lara-admin::components.edit-page');
     }
 }

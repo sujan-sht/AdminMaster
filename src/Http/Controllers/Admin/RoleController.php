@@ -22,7 +22,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return view('admin.role.index',$this->roleRepositoryInterface->indexRole());
+        return view('lara-admin::admin.role.index',$this->roleRepositoryInterface->indexRole());
     }
 
     /**
@@ -30,7 +30,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('admin.role.create');
+        return view('lara-admin::admin.role.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        return view('admin.role.show',$this->roleRepositoryInterface->showRole($role));
+        return view('lara-admin::admin.role.show',$this->roleRepositoryInterface->showRole($role));
     }
 
     /**
@@ -55,7 +55,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        return view('admin.role.edit',$this->roleRepositoryInterface->editRole($role));
+        return view('lara-admin::admin.role.edit',$this->roleRepositoryInterface->editRole($role));
     }
 
     /**

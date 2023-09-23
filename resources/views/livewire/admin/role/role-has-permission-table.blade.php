@@ -19,7 +19,7 @@
             <hr>
             @if (!is_null($permissions))
                 @foreach ($permissions as $permission)
-                    @livewire('lara-admin::admin.role.bread-permission', ['permission' => $permission], key('permission' . $permission->id))
+                    @livewire('admin.role.bread-permission', ['permission' => $permission], key('permission' . $permission->id))
                 @endforeach
             @endif
         </div>

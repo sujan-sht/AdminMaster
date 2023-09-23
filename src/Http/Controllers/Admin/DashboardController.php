@@ -9,6 +9,6 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.dashboard.index');
+        return view('lara-admin::admin.dashboard.index');
     }
 }

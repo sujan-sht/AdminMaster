@@ -27,7 +27,7 @@ class MenuTable extends DataTableComponent
                 ->searchable(),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-action :model="$model" route="menus" :show="true" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="menus" :show="true" />', ['model' => $row])
                 )
                 ->html(),
         ];

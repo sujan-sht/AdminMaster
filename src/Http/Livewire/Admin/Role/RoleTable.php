@@ -37,7 +37,7 @@ class RoleTable extends DataTableComponent
                 ->collapseOnTablet(),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-action :model="$model" route="roles" :show="true" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="roles" :show="true" />', ['model' => $row])
                 )
                 ->html(),
         ];

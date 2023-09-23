@@ -2,7 +2,7 @@
 
 @section('content')
 
-<x-edit-page name="user" route="users" :model="$user">
+<x-lara-admin-edit-page name="user" route="users" :model="$user">
    <x-slot name="content">
         @include('lara-admin::admin.layouts.modules.user.form')
    </x-slot>

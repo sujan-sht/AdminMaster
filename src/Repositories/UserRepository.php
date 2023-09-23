@@ -2,7 +2,7 @@
 
 namespace SujanSht\LaraAdmin\Repositories;
 
-use SujanSht\LaraAdmin\Models\User;
+use App\Models\User;
 use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
 use SujanSht\LaraAdmin\Http\Requests\UserRequest;
 use SujanSht\LaraAdmin\Models\Admin\Role;

@@ -53,7 +53,7 @@ class PermissionTable extends DataTableComponent
                 ->format([$this,'nullCheck']),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-action :model="$model" route="permissions" :show="false" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="permissions" :show="false" />', ['model' => $row])
                 )
                 ->html(),
         ];

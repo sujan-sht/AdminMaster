@@ -287,7 +287,6 @@
                     aria-expanded="false">
                     <span class="account-user-avatar">
                         <img src="{{Auth::user()->image}}" alt="{{Auth::user()->name}}" class="rounded-circle">
-                        {{-- <img src="{{asset('lara-admin/assets/images/users/avatar-1.jpg')}}" alt="user-image" class="rounded-circle"> --}}
                     </span>
                     <span>
                         <span class="account-user-name">{{Auth::user()->name}}</span>

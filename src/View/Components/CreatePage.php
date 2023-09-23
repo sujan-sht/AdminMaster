@@ -30,6 +30,6 @@ class CreatePage extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.create-page');
+        return view('lara-admin::components.create-page');
     }
 }

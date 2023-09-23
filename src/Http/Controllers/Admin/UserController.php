@@ -5,7 +5,7 @@ namespace SujanSht\LaraAdmin\Http\Controllers\Admin;
 use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
 use SujanSht\LaraAdmin\Http\Controllers\Controller;
 use SujanSht\LaraAdmin\Http\Requests\UserRequest;
-use SujanSht\LaraAdmin\Models\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -22,7 +22,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.user.index',$this->userRepositoryInterface->indexUser());
+        return view('lara-admin::admin.user.index',$this->userRepositoryInterface->indexUser());
     }
 
     /**
@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create',$this->userRepositoryInterface->createUser());
+        return view('lara-admin::admin.user.create',$this->userRepositoryInterface->createUser());
     }
 
     /**
@@ -47,7 +47,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('admin.user.show',$this->userRepositoryInterface->showUser($user));
+        return view('lara-admin::admin.user.show',$this->userRepositoryInterface->showUser($user));
     }
 
     /**
@@ -55,7 +55,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('admin.user.edit',$this->userRepositoryInterface->editUser($user));
+        return view('lara-admin::admin.user.edit',$this->userRepositoryInterface->editUser($user));
     }
 
     /**

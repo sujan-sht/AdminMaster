@@ -2,7 +2,7 @@
 
 @section('content')
 
-<x-edit-page name="menu" route="menus" :model="$menu">
+<x-lara-admin-edit-page name="menu" route="menus" :model="$menu">
    <x-slot name="content">
         @include('lara-admin::admin.layouts.modules.menu.form')
    </x-slot>

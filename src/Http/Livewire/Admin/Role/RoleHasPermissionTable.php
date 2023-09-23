@@ -38,7 +38,7 @@ class RoleHasPermissionTable extends Component
     }
     public function render()
     {
-        return view('livewire.admin.role.role-has-permission-table');
+        return view('lara-admin::livewire.admin.role.role-has-permission-table');
     }
 
     private function setRolePermission(Role $role)

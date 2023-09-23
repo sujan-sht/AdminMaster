@@ -22,7 +22,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('admin.menu.index',$this->menuRepositoryInterface->indexMenu());
+        return view('lara-admin::admin.menu.index',$this->menuRepositoryInterface->indexMenu());
     }
 
     /**
@@ -30,7 +30,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-        return view('admin.menu.create');
+        return view('lara-admin::admin.menu.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-        return view('admin.menu.show',$this->menuRepositoryInterface->showMenu($menu));
+        return view('lara-admin::admin.menu.show',$this->menuRepositoryInterface->showMenu($menu));
     }
 
     /**
@@ -55,7 +55,7 @@ class MenuController extends Controller
      */
     public function edit(Menu $menu)
     {
-        return view('admin.menu.edit',$this->menuRepositoryInterface->editMenu($menu));
+        return view('lara-admin::admin.menu.edit',$this->menuRepositoryInterface->editMenu($menu));
     }
 
     /**

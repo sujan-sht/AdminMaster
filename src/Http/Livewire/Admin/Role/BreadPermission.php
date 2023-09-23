@@ -76,6 +76,6 @@ class BreadPermission extends Component
 
     public function render()
     {
-        return view('livewire.admin.role.bread-permission');
+        return view('lara-admin::livewire.admin.role.bread-permission');
     }
 }

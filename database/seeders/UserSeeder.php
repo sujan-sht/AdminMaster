@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use SujanSht\LaraAdmin\Models\Admin\Role;
-use SujanSht\LaraAdmin\Models\User;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;

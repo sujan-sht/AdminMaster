@@ -23,7 +23,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        return view('admin.permission.index',$this->permissionRepositoryInterface->indexPermission());
+        return view('lara-admin::admin.permission.index',$this->permissionRepositoryInterface->indexPermission());
     }
 
     /**
@@ -31,7 +31,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('admin.permission.create',$this->permissionRepositoryInterface->createPermission());
+        return view('lara-admin::admin.permission.create',$this->permissionRepositoryInterface->createPermission());
     }
 
     /**
@@ -48,7 +48,7 @@ class PermissionController extends Controller
      */
     public function show(Permission $permission)
     {
-        return view('admin.permission.show',$this->permissionRepositoryInterface->showPermission($permission));
+        return view('lara-admin::admin.permission.show',$this->permissionRepositoryInterface->showPermission($permission));
     }
 
     /**
@@ -56,7 +56,7 @@ class PermissionController extends Controller
      */
     public function edit(Permission $permission)
     {
-        return view('admin.permission.edit',$this->permissionRepositoryInterface->editPermission($permission));
+        return view('lara-admin::admin.permission.edit',$this->permissionRepositoryInterface->editPermission($permission));
     }
 
     /**

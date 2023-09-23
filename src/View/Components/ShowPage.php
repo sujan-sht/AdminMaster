@@ -7,17 +7,20 @@ use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use Illuminate\Support\Str;
 
-class AddEditButton extends Component
+class ShowPage extends Component
 {
-    public $model;
     public $name;
+    public $plural_name;
+    public $route;
+
     /**
      * Create a new component instance.
      */
-    public function __construct($model,$name)
+    public function __construct($name,$route)
     {
-        $this->model = $model;
         $this->name = Str::ucfirst($name);
+        $this->plural_name = Str::plural($this->name);
+        $this->route = $route;
     }
 
     /**
@@ -25,6 +28,6 @@ class AddEditButton extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('lara-admin::components.add-edit-button');
+        return view('lara-admin::components.show-page');
     }
 }

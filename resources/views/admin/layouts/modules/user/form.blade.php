@@ -53,6 +53,6 @@
     </div>
 
     <div class="row">
-        <x-add-edit-button :model="$user ?? ''" name="user"></x-add-edit-button>
+        <x-lara-admin-add-edit-button :model="$user ?? ''" name="user"></x-add-edit-button>
     </div>
 </div>

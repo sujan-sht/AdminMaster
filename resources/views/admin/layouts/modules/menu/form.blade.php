@@ -24,7 +24,7 @@
         @enderror
     </div> --}}
     <div class="row">
-        <x-add-edit-button :model="$menu ?? ''" name="menu"></x-add-edit-button>
+        <x-lara-admin-add-edit-button :model="$menu ?? ''" name="menu"></x-add-edit-button>
     </div>
 </div>
 <div id="icon" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="fullWidthModalLabel" aria-hidden="true">

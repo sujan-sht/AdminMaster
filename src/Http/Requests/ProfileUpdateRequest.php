@@ -2,7 +2,7 @@
 
 namespace SujanSht\LaraAdmin\Http\Requests;
 
-use SujanSht\LaraAdmin\Models\User;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

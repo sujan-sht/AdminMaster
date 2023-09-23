@@ -3,7 +3,7 @@
 namespace SujanSht\LaraAdmin\Policies;
 
 use SujanSht\LaraAdmin\Models\Admin\Menu;
-use SujanSht\LaraAdmin\Models\User;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Auth\Access\Response;
 

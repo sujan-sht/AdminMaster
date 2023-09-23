@@ -2,7 +2,7 @@
 
 namespace SujanSht\LaraAdmin\Http\Livewire\Admin\User;
 
-use SujanSht\LaraAdmin\Models\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\Views\Column;
@@ -36,7 +36,7 @@ class UserTable extends DataTableComponent
                 ->searchable(),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-action :model="$model" route="users" :show="false" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="users" :show="false" />', ['model' => $row])
                 )
                 ->html(),
         ];

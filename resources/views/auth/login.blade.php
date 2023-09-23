@@ -33,9 +33,9 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email address</label>
                                 <input class="form-control" type="email" id="email" name="email" value="{{old('email')}}" required autofocus autocomplete="username" placeholder="Enter your email">
-                                @error('email')
+                                {{-- @error('email')
                                     <span class="text-danger">{{$message}}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
                             <div class="mb-3">
                                 @if (Route::has('password.request'))
@@ -43,9 +43,9 @@
                                 @endif
                                 <label for="password" class="form-label">Password</label>
                                 <input class="form-control" type="password" name="password" id="password" required autocomplete="current-password" placeholder="Enter your password">
-                                @error('password')
+                                {{-- @error('password')
                                     <span class="text-danger">{{$message}}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">

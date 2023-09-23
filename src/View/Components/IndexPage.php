@@ -28,6 +28,6 @@ class IndexPage extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.index-page');
+        return view('lara-admin::components.index-page');
     }
 }

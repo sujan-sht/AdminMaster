@@ -3,7 +3,7 @@
 namespace SujanSht\LaraAdmin\Contracts;
 
 use SujanSht\LaraAdmin\Http\Requests\UserRequest;
-use SujanSht\LaraAdmin\Models\User;
+use App\Models\User;
 
 interface UserRepositoryInterface
 {

@@ -2,9 +2,8 @@
 
 namespace SujanSht\LaraAdmin\Providers;
 
+use App\Models\User;
 use Livewire\Livewire;
-use SujanSht\LaraAdmin\User;
-use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Blade;
@@ -16,9 +15,9 @@ use SujanSht\LaraAdmin\Policies\MenuPolicy;
 use SujanSht\LaraAdmin\Policies\RolePolicy;
 use SujanSht\LaraAdmin\Policies\UserPolicy;
 use SujanSht\LaraAdmin\View\Components\Action;
-use SujanSht\LaraAdmin\Mixins\AdminRouteMixins;
 use SujanSht\LaraAdmin\Models\Admin\Permission;
 use SujanSht\LaraAdmin\View\Components\EditPage;
+use SujanSht\LaraAdmin\View\Components\ShowPage;
 use SujanSht\LaraAdmin\Policies\PermissionPolicy;
 use SujanSht\LaraAdmin\View\Components\IndexPage;
 use SujanSht\LaraAdmin\View\Components\CreatePage;
@@ -32,14 +31,14 @@ use SujanSht\LaraAdmin\Contracts\MenuRepositoryInterface;
 use SujanSht\LaraAdmin\Contracts\RoleRepositoryInterface;
 use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
 use SujanSht\LaraAdmin\Repositories\PermissionRepository;
-use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
-use SujanSht\LaraAdmin\Console\Commands\RepositoryPatternGenerator;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Menu\MenuTable;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Permission\PermissionTable;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\BreadPermission;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleHasPermissionTable;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleTable;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\User\UserTable;
+use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
+use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\BreadPermission;
+use SujanSht\LaraAdmin\Console\Commands\RepositoryPatternGenerator;
+use SujanSht\LaraAdmin\Http\Livewire\Admin\Permission\PermissionTable;
+use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleHasPermissionTable;
 
 class LaraAdminServiceProvider extends ServiceProvider
 {
@@ -93,8 +92,8 @@ class LaraAdminServiceProvider extends ServiceProvider
         $this->registerCommands();
         /* Repository Interface Binding */
         $this->repos();
-        // Register Mixins
-        Route::mixin(new AdminRouteMixins());
+
+
     }
 
     /**
@@ -117,9 +116,10 @@ class LaraAdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../database/seeders' => database_path('seeders'),
         ], 'lara-admin-seeders');
+        // Publish Public Assets
         $this->publishes([
             __DIR__.'/../../payload/lara-admin/assets' => public_path('lara-admin/assets'),
-        ], 'lara-admin-assets-files');
+        ], 'lara-admin-assets');
 
     }
 
@@ -142,9 +142,11 @@ class LaraAdminServiceProvider extends ServiceProvider
      */
     protected function registerRoutes()
     {
-        // Route::group($this->routeConfiguration(), function () {
+        $this->loadRoutesFrom(__DIR__.'/../../routes/auth.php');
+        Route::group($this->routeConfiguration(), function () {
             $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
-        // });
+        });
+
     }
 
     /**
@@ -155,6 +157,7 @@ class LaraAdminServiceProvider extends ServiceProvider
     protected function routeConfiguration()
     {
         return [
+            'prefix' => 'admin',
             'middleware' => ['web', 'auth'],
         ];
     }
@@ -214,12 +217,13 @@ class LaraAdminServiceProvider extends ServiceProvider
      */
     protected function registerComponents()
     {
-        $this->loadViewComponentsAs('adminetic', [
+        $this->loadViewComponentsAs('lara-admin', [
             Action::class,
             AddEditButton::class,
             CreatePage::class,
             EditPage::class,
             IndexPage::class,
+            ShowPage::class,
         ]);
     }
 
