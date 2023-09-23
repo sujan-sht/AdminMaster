@@ -14,6 +14,7 @@ class RoleHasPermissionTable extends Component
     public $role_models;
     public $remaining_modules;
     public $model_name;
+    public $system_modules;
 
     public function mount(Role $role)
     {
@@ -46,7 +47,8 @@ class RoleHasPermissionTable extends Component
         $this->role = $role;
         $this->permissions = $role->permissions;
         $this->modules = getAllModelNames(app_path('Models'));
+        $this->system_modules = getAllModelNames(__DIR__.'/../../../../Models');
         $this->role_models = $role->permissions->pluck('model')->toArray();
-        $this->remaining_modules = array_diff($this->modules, $this->role_models ?? []);
+        $this->remaining_modules = array_diff(array_merge($this->system_modules, $this->modules, $this->role_models ?? []));
     }
 }

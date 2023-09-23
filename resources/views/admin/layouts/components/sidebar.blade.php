@@ -74,18 +74,18 @@
                 </a>
             </li>
 
-            {{-- @isset($menus) --}}
-            {{-- @if (!is_null($menus))
-            @foreach ($menus as $menu)
-            <li class="side-nav-item">
-                <a href="{{route($menu->route.'.index')}}" class="side-nav-link">
-                    <i class="{{$menu->icon}}"></i>
-                    <span> {{$menu->name}} </span>
-                </a>
-            </li>
-            @endforeach
-        @endif --}}
-            {{-- @endisset --}}
+            @isset($menus)
+                @if (!is_null($menus))
+                    @foreach ($menus as $menu)
+                    <li class="side-nav-item">
+                        <a href="{{route($menu->route.'.index')}}" class="side-nav-link">
+                            <i class="{{$menu->icon}}"></i>
+                            <span> {{$menu->name}} </span>
+                        </a>
+                    </li>
+                    @endforeach
+                @endif
+            @endisset
 
         </ul>
         <!--- End Sidemenu -->
