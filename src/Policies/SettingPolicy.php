@@ -2,12 +2,12 @@
 
 namespace SujanSht\LaraAdmin\Policies;
 
-use SujanSht\LaraAdmin\Models\Admin\Menu;
+use SujanSht\LaraAdmin\Models\Admin\Setting;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Auth\Access\Response;
 
-class MenuPolicy
+class SettingPolicy
 {
     use HandlesAuthorization;
 
@@ -23,15 +23,15 @@ class MenuPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->userCanDo('Menu', 'browse');
+        return $user->userCanDo('Setting', 'browse');
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Menu $menu): bool
+    public function view(User $user, Setting $setting): bool
     {
-        return $user->userCanDo('Menu', 'read');
+        return $user->userCanDo('Setting', 'read');
     }
 
     /**
@@ -39,29 +39,29 @@ class MenuPolicy
      */
     public function create(User $user): bool
     {
-        return $user->userCanDo('Menu', 'add');
+        return $user->userCanDo('Setting', 'add');
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Menu $menu): bool
+    public function update(User $user, Setting $setting): bool
     {
-        return $user->userCanDo('Menu', 'edit');
+        return $user->userCanDo('Setting', 'edit');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Menu $menu): bool
+    public function delete(User $user, Setting $setting): bool
     {
-        return $user->userCanDo('Menu', 'delete');
+        return $user->userCanDo('Setting', 'delete');
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Menu $menu): bool
+    public function restore(User $user, Setting $setting): bool
     {
         return true;
     }
@@ -69,7 +69,7 @@ class MenuPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Menu $menu): bool
+    public function forceDelete(User $user, Setting $setting): bool
     {
         return true;
     }

@@ -1,17 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use SujanSht\LaraAdmin\Http\Controllers\Auth\VerifyEmailController;
+use SujanSht\LaraAdmin\Http\Controllers\Auth\ConfirmablePasswordController;
+use SujanSht\LaraAdmin\Http\Controllers\Auth\AuthenticatedSessionController;
+use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationPromptController;
+use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationNotificationController;
 use SujanSht\LaraAdmin\Http\Controllers\Admin\MenuController;
 use SujanSht\LaraAdmin\Http\Controllers\Admin\RoleController;
 use SujanSht\LaraAdmin\Http\Controllers\Admin\UserController;
 use SujanSht\LaraAdmin\Http\Controllers\Auth\PasswordController;
 use SujanSht\LaraAdmin\Http\Controllers\admin\DashboardController;
 use SujanSht\LaraAdmin\Http\Controllers\Admin\PermissionController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\VerifyEmailController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\ConfirmablePasswordController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\AuthenticatedSessionController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationPromptController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationNotificationController;
+use SujanSht\LaraAdmin\Http\Controllers\Admin\SettingController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,35 +27,38 @@ use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationNotificationContro
 */
 
 
-// require __DIR__.'/auth.php';
-
-// Route::authRoutes();
-
-// Route::prefix('admin')->group(function () {
-    Route::get('dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
-    Route::resource('roles',RoleController::class);
-    Route::resource('users',UserController::class);
-    Route::resource('permissions',PermissionController::class);
-    Route::resource('menus',MenuController::class);
-
-// });
+// Auth routes
 Route::get('verify-email', EmailVerificationPromptController::class)
-                ->name('verification.notice');
+            ->name('verification.notice');
 
-    Route::get('verify-email/{id}/{hash}', VerifyEmailController::class)
-                ->middleware(['signed', 'throttle:6,1'])
-                ->name('verification.verify');
+Route::get('verify-email/{id}/{hash}', VerifyEmailController::class)
+            ->middleware(['signed', 'throttle:6,1'])
+            ->name('verification.verify');
 
-    Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
-                ->middleware('throttle:6,1')
-                ->name('verification.send');
+Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
+            ->middleware('throttle:6,1')
+            ->name('verification.send');
 
-    Route::get('confirm-password', [ConfirmablePasswordController::class, 'show'])
-                ->name('password.confirm');
+Route::get('confirm-password', [ConfirmablePasswordController::class, 'show'])
+            ->name('password.confirm');
 
-    Route::post('confirm-password', [ConfirmablePasswordController::class, 'store']);
+Route::post('confirm-password', [ConfirmablePasswordController::class, 'store']);
 
-    Route::put('password', [PasswordController::class, 'update'])->name('password.update');
+Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 
-    Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
-                ->name('logout');
+Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+            ->name('logout');
+
+
+// System Routes
+Route::get('dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+Route::resource('roles',RoleController::class);
+Route::resource('users',UserController::class);
+Route::resource('permissions',PermissionController::class);
+Route::resource('menus',MenuController::class);
+Route::resource('settings',SettingController::class);
+
+Route::post('setting-store', [SettingController::class, 'setting_store'])->name('setting_store');
+
+
+

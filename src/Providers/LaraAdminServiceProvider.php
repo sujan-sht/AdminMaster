@@ -26,6 +26,7 @@ use SujanSht\LaraAdmin\Repositories\RoleRepository;
 use SujanSht\LaraAdmin\Repositories\UserRepository;
 use SujanSht\LaraAdmin\View\Components\AddEditButton;
 use SujanSht\LaraAdmin\Console\Commands\CrudGenerator;
+use SujanSht\LaraAdmin\Repositories\SettingRepository;
 use SujanSht\LaraAdmin\Console\Commands\GenerateService;
 use SujanSht\LaraAdmin\Contracts\MenuRepositoryInterface;
 use SujanSht\LaraAdmin\Contracts\RoleRepositoryInterface;
@@ -34,11 +35,15 @@ use SujanSht\LaraAdmin\Repositories\PermissionRepository;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Menu\MenuTable;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleTable;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\User\UserTable;
+use SujanSht\LaraAdmin\Contracts\SettingRepositoryInterface;
 use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\BreadPermission;
 use SujanSht\LaraAdmin\Console\Commands\RepositoryPatternGenerator;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Permission\PermissionTable;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleHasPermissionTable;
+use SujanSht\LaraAdmin\Http\Livewire\Admin\Setting\SettingTable;
+use SujanSht\LaraAdmin\Models\Admin\Setting;
+use SujanSht\LaraAdmin\Policies\SettingPolicy;
 
 class LaraAdminServiceProvider extends ServiceProvider
 {
@@ -48,6 +53,7 @@ class LaraAdminServiceProvider extends ServiceProvider
         Permission::class => PermissionPolicy::class,
         Role::class => RolePolicy::class,
         Menu::class => MenuPolicy::class,
+        Setting::class => SettingPolicy::class,
     ];
     /**
      * The path to the "home" route for your application.
@@ -206,6 +212,8 @@ class LaraAdminServiceProvider extends ServiceProvider
         $this->app->bind(MenuRepositoryInterface::class, MenuRepository::class);
         $this->app->bind(RoleRepositoryInterface::class, RoleRepository::class);
         $this->app->bind(PermissionRepositoryInterface::class, PermissionRepository::class);
+        $this->app->bind(SettingRepositoryInterface::class, SettingRepository::class);
+
     }
 
 
@@ -250,6 +258,8 @@ class LaraAdminServiceProvider extends ServiceProvider
         Livewire::component('admin.user.user-table', UserTable::class);
         Livewire::component('admin.role.bread-permission', BreadPermission::class);
         Livewire::component('admin.role.role-has-permission-table', RoleHasPermissionTable::class);
+        Livewire::component('admin.setting.setting-table', SettingTable::class);
+
     }
 
 }

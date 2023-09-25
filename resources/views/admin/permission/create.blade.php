@@ -5,5 +5,5 @@
    <x-slot name="content">
         @include('lara-admin::admin.layouts.modules.permission.form')
    </x-slot>
-</x-create-page>
+</x-lara-admin-create-page>
 @endsection
