@@ -66,7 +66,9 @@
             <option selected disabled>Select Setting Group ...</option>
             @isset($setting_groups)
                 @foreach (array_unique($setting_groups) as $group)
-                    <option value="{{ $group }}" {{$setting->setting_group == $group ? 'selected' : ''}}>{{ $group }}</option>
+                    <option value="{{ $group }}" @isset($setting)
+                    {{ $setting->setting_group == $group ? 'selected' : ''}}
+                    @endisset>{{ $group }}</option>
                 @endforeach
             @endisset
         </select>

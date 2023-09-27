@@ -53,9 +53,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SujanSht\\LaraAdmin\\Providers\\LaraAdminServiceProvider",
-                "SujanSht\\LaraAdmin\\Providers\\SystemServiceProvider"
-
+                "SujanSht\\LaraAdmin\\Providers\\LaraAdminServiceProvider"
             ]
         }
     }

@@ -18,6 +18,10 @@
 <!-- Vector Map css -->
 <link rel="stylesheet" href="{{asset('lara-admin/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css')}}">
 
+<link rel="stylesheet" href="{{asset('lara-admin/assets/css/custom.css')}}" />
+
+<link rel="stylesheet" href="{{asset('lara-admin/assets/css/fontawesome-browser.css')}}" />
+
 <!-- Theme Config Js -->
 <script src="{{asset('lara-admin/assets/js/hyper-config.js')}}"></script>
 

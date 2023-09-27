@@ -22,7 +22,8 @@ class modelNameController extends Controller
      */
     public function index()
     {
-        return view('admin.lowercaseModelName.index',$this->lowercaseModelNameRepositoryInterface->indexmodelName());
+        //return view('admin.lowercaseModelName.index',$this->lowercaseModelNameRepositoryInterface->indexmodelName());
+        return view('admin.lowercaseModelName.index');
     }
 
     /**

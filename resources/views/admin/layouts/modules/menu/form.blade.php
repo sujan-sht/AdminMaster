@@ -7,43 +7,26 @@
         @enderror
     </div>
 
+
     <div class="col-md-6 mb-3">
-        <label for="position">Position</label><span class="text-danger">*</span>
-        <input type="number" name="position" min="0" class="form-control" value="{{$menu->position ?? old('position')}}">
-        @error('position')
-            <span class="text-danger">{{$message}}</span>
-        @enderror
+        <label>Active</label>
+            <br>
+            <input type="hidden" name="active" value="0">
+            <input type="checkbox" name="active" id="switch1" data-switch="bool" value="1" {{ isset($menu->active) ? ($menu->active ? 'checked' : '') : 'checked' }}/>
+
+            <label for="switch1" data-on-label="On" data-off-label="Off"></label>
     </div>
 
-    {{-- <div class="col-md-6 mb-3">
+    <div class="col-md-6 mb-3">
         <label for="icon">Menu Icon</label>
-        <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#icon">Choose Icon</button>
-
+        <input type="text" name="icon" class="form-control" placeholder="Select icon" data-fa-browser value="{{$menu->icon ?? old('icon')}}"/>
        @error('icon')
             <span class="text-danger">{{$message}}</span>
         @enderror
-    </div> --}}
+    </div>
     <div class="row">
         <x-lara-admin-add-edit-button :model="$menu ?? ''" name="menu"></x-add-edit-button>
     </div>
 </div>
-<div id="icon" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="fullWidthModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-full-width modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="fullWidthModalLabel">Choose Icon</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-12" id="icons"></div> <!-- end col-->
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Select</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div>
+
 

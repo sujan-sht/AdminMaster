@@ -68,24 +68,28 @@
                 </a>
             </li>
             <li class="side-nav-item">
+                <a href="{{route('settings.index')}}" class="side-nav-link">
+                    <i class="uil-calender"></i>
+                    <span> Settings </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
                 <a href="{{route('menus.index')}}" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Menus </span>
                 </a>
             </li>
-
-            @isset($menus)
-                @if (!is_null($menus))
-                    @foreach ($menus as $menu)
-                    <li class="side-nav-item">
-                        <a href="{{route($menu->route.'.index')}}" class="side-nav-link">
-                            <i class="{{$menu->icon}}"></i>
-                            <span> {{$menu->name}} </span>
-                        </a>
-                    </li>
-                    @endforeach
-                @endif
-            @endisset
+            <li class="side-nav-title side-nav-item">Other Modules</li>
+            @if (!is_null(adminMenus()))
+                @foreach (adminMenus() as $menu)
+                <li class="side-nav-item">
+                    <a href="{{route($menu->route.'.index')}}" class="side-nav-link">
+                        <i class="{{$menu->icon}}"></i>
+                        <span> {{$menu->name}} </span>
+                    </a>
+                </li>
+                @endforeach
+            @endif
 
         </ul>
         <!--- End Sidemenu -->

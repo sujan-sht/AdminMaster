@@ -45,10 +45,8 @@ class MenuRepository implements MenuRepositoryInterface
     // Menu Update
     public function updateMenu(MenuRequest $request, Menu $menu)
     {
-        if($request->validated()){
-            Artisan::call('edit:crud ' . $request->name);
-        }
-        // $menu->update($request->validated());
+
+        $menu->update($request->validated());
     }
 
     // Menu Destroy

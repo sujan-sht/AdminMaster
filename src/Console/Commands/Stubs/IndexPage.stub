@@ -1,9 +1,9 @@
-@extends('admin.layouts.app')
+@extends('lara-admin::admin.layouts.app')
 
 @section('content')
-    <x-index-page name="lowercaseModelName" route="pluralModelName">
+    <x-lara-admin-index-page name="lowercaseModelName" route="pluralModelName">
         <x-slot name="content">
             @livewire('admin.lowercaseModelName.lowercaseModelName-table')
         </x-slot>
-    </x-index-page>
+    </x-lara-admin-index-page>
 @endsection

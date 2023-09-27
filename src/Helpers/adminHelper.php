@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\View;
+use SujanSht\LaraAdmin\Models\Admin\Menu;
+
 if (! function_exists('getClassesList')) {
     function getClassesList($dir)
     {
@@ -27,4 +30,12 @@ if (! function_exists('getAllModelNames')) {
 
         return $modelNames;
     }
+}
+
+if(! function_exists('adminMenus')){
+    function adminMenus()
+    {
+        return Menu::active()->position()->get();
+    }
+
 }

@@ -2,11 +2,14 @@
     <div id="{{$id}}" class="{{$class}}">
         <div class="{{$class}}">
             @if ($model)
+                @if ($model->$imageName)
                 <div class="img-upload-preview">
                     <img loading="lazy"  src="{{ $model->$imageName }}" alt="" class="img-responsive" style="max-height:{{$height}};">
                     {{-- <input type="hidden" name="previous_photos[]" value="{{ $photo }}"> --}}
                     <button type="button" class="btn btn-danger close-btn remove-files"><i class="fa fa-times"></i></button>
                 </div>
+                @endif
+
             @endif
 
         </div>

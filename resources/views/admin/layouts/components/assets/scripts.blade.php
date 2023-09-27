@@ -25,6 +25,9 @@
  <!-- Apex Charts js -->
  {{-- <script src="{{asset('lara-admin/assets/vendor/apexcharts/apexcharts.min.js')}}"></script> --}}
 
+<script src="{{asset('lara-admin/assets/js/fontawesome-browser.js')}}"></script>
+
+
  <!-- Vector Map js -->
  <script src="{{asset('lara-admin/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
  <script src="{{asset('lara-admin/assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js')}}"></script>
@@ -87,6 +90,11 @@
     @endif
 
 </script>
+<script>
+    $(function($) {
+      $.fabrowser();
+  });
+  </script>
 
  @livewireScripts
  @stack('livewire_third_party')
