@@ -3,6 +3,7 @@
 namespace SujanSht\LaraAdmin\Providers;
 
 use App\Models\User;
+
 use Livewire\Livewire;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -14,6 +15,8 @@ use SujanSht\LaraAdmin\Models\Admin\Role;
 use SujanSht\LaraAdmin\Policies\MenuPolicy;
 use SujanSht\LaraAdmin\Policies\RolePolicy;
 use SujanSht\LaraAdmin\Policies\UserPolicy;
+use SujanSht\LaraAdmin\Models\Admin\Setting;
+use SujanSht\LaraAdmin\Policies\SettingPolicy;
 use SujanSht\LaraAdmin\View\Components\Action;
 use SujanSht\LaraAdmin\Models\Admin\Permission;
 use SujanSht\LaraAdmin\View\Components\EditPage;
@@ -24,6 +27,7 @@ use SujanSht\LaraAdmin\View\Components\CreatePage;
 use SujanSht\LaraAdmin\Repositories\MenuRepository;
 use SujanSht\LaraAdmin\Repositories\RoleRepository;
 use SujanSht\LaraAdmin\Repositories\UserRepository;
+use SujanSht\LaraAdmin\View\Components\ImageUpload;
 use SujanSht\LaraAdmin\View\Components\AddEditButton;
 use SujanSht\LaraAdmin\Console\Commands\CrudGenerator;
 use SujanSht\LaraAdmin\Repositories\SettingRepository;
@@ -38,12 +42,10 @@ use SujanSht\LaraAdmin\Http\Livewire\Admin\User\UserTable;
 use SujanSht\LaraAdmin\Contracts\SettingRepositoryInterface;
 use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\BreadPermission;
+use SujanSht\LaraAdmin\Http\Livewire\Admin\Setting\SettingTable;
 use SujanSht\LaraAdmin\Console\Commands\RepositoryPatternGenerator;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Permission\PermissionTable;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleHasPermissionTable;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Setting\SettingTable;
-use SujanSht\LaraAdmin\Models\Admin\Setting;
-use SujanSht\LaraAdmin\Policies\SettingPolicy;
 
 class LaraAdminServiceProvider extends ServiceProvider
 {
@@ -232,6 +234,8 @@ class LaraAdminServiceProvider extends ServiceProvider
             EditPage::class,
             IndexPage::class,
             ShowPage::class,
+            ImageUpload::class,
+
         ]);
     }
 

@@ -41,6 +41,7 @@
  <script src="{{asset('lara-admin/assets/js/app.min.js')}}"></script>
 
 
+ @yield('scripts')
 
 
  <script>
@@ -86,36 +87,6 @@
     @endif
 
 </script>
-<script type="text/javascript">
-    $(function(){
-        $("#multi_image_picker").spartanMultiImagePicker({
-            fieldName     : 'image',
-            maxCount      : 1,
-            rowHeight     : '200px',
-            groupClassName: 'col-4',
-            maxFileSize   : 2500,
-            dropFileLabel : "Drop Here",
-            onAddRow      : function(index){
-                console.log(index);
-                console.log('add new row');
-            },
-            onRenderedPreview : function(index){
-                console.log(index);
-                console.log('preview rendered');
-            },
-            onRemoveRow : function(index){
-                console.log(index);
-            },
-            onExtensionErr : function(index, file){
-                console.log(index, file,  'extension err');
-                alert('Please only input png or jpg type file')
-            },
-            onSizeErr : function(index, file){
-                console.log(index, file,  'file size too big');
-                alert('File size too big');
-            }
-        });
-    });
-</script>
+
  @livewireScripts
  @stack('livewire_third_party')

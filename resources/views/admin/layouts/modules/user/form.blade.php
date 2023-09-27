@@ -47,8 +47,8 @@
 
         <label for="image">Image</label>
 
-        {{-- <input type="file" name="image" id="image" class="form-control"> --}}
-        <div id="multi_image_picker" class="row"></div>
+        <x-lara-admin-image-upload id="user_image" class="col-md-6 mb-3" :model="$user ?? ''" imageName="user"></x-image-upload>
+
 
     </div>
 
