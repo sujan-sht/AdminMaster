@@ -1,8 +1,8 @@
 <?php
 
 use App\Models\Admin\Page;
-use SujanSht\LaraAdmin\Models\Admin\Menu;
-use SujanSht\LaraAdmin\Models\Admin\Setting;
+use SujanSht\AdminMaster\Models\Admin\Menu;
+use SujanSht\AdminMaster\Models\Admin\Setting;
 
 if (! function_exists('getClassesList')) {
     function getClassesList($dir)
@@ -84,19 +84,19 @@ if (! function_exists('getImg')) {
 if (! function_exists('post_status')) {
     function post_status()
     {
-        return config('lara-admin.post_status') ?? ['Not Approved','Publish','Pending','Draft'];
+        return config('admin-master.post_status') ?? ['Not Approved','Publish','Pending','Draft'];
     }
 }
 if (! function_exists('post_type')) {
     function post_type()
     {
-        return config('lara-admin.post_type') ?? ['Blog','Story'];
+        return config('admin-master.post_type') ?? ['Blog','Story'];
     }
 }
 if (! function_exists('page_type')) {
     function page_type()
     {
-        return config('lara-admin.page_type') ?? ['Other','About'];
+        return config('admin-master.page_type') ?? ['Other','About'];
     }
 }
 if (! function_exists('parseYoutube')) {
@@ -110,80 +110,80 @@ if (! function_exists('parseYoutube')) {
 if (! function_exists('logo')) {
     function logo()
     {
-        return getImg(! is_null(setting('logo')) ? setting('logo') : config('lara-admin.logo', 'lara-admin/assets/static-img/logo.png'), config('lara-admin.logo', 'lara-admin/assets/static-img/logo.png'));
+        return getImg(! is_null(setting('logo')) ? setting('logo') : config('admin-master.logo', 'admin-master/assets/static-img/logo.png'), config('admin-master.logo', 'admin-master/assets/static-img/logo.png'));
     }
 }
 if (! function_exists('favicon')) {
     function favicon()
     {
-        return getImg(! is_null(setting('favicon')) ? setting('favicon') : config('lara-admin.favicon', 'lara-admin/assets/static-img/favicon.png'), config('lara-admin.favicon', 'lara-admin/assets/static-img/favicon.png'));
+        return getImg(! is_null(setting('favicon')) ? setting('favicon') : config('admin-master.favicon', 'admin-master/assets/static-img/favicon.png'), config('admin-master.favicon', 'admin-master/assets/static-img/favicon.png'));
     }
 }
 if (! function_exists('title')) {
     function title()
     {
-        return !is_null(setting('title')) ? setting('title') : config('lara-admin.title');
+        return !is_null(setting('title')) ? setting('title') : config('admin-master.title');
     }
 }
 if (! function_exists('meta_description')) {
     function meta_description()
     {
-        return !is_null(setting('meta_description')) ? setting('meta_description') : config('lara-admin.meta_description');
+        return !is_null(setting('meta_description')) ? setting('meta_description') : config('admin-master.meta_description');
     }
 }
 if (! function_exists('keywords')) {
     function keywords()
     {
-        return !is_null(setting('keywords')) ? setting('keywords') : config('lara-admin.keywords');
+        return !is_null(setting('keywords')) ? setting('keywords') : config('admin-master.keywords');
     }
 }
 
 if (! function_exists('address')) {
     function address()
     {
-        return !is_null(setting('address')) ? setting('address') : config('lara-admin.address');
+        return !is_null(setting('address')) ? setting('address') : config('admin-master.address');
     }
 }
 if (! function_exists('phone')) {
     function phone()
     {
-        return !is_null(setting('phone')) ? setting('phone') : config('lara-admin.phone');
+        return !is_null(setting('phone')) ? setting('phone') : config('admin-master.phone');
     }
 }
 if (! function_exists('facebook')) {
     function facebook()
     {
-        return !is_null(setting('facebook')) ? setting('facebook') : config('lara-admin.facebook');
+        return !is_null(setting('facebook')) ? setting('facebook') : config('admin-master.facebook');
     }
 }
 if (! function_exists('instagram')) {
     function instagram()
     {
-        return !is_null(setting('instagram')) ? setting('instagram') : config('lara-admin.instagram');
+        return !is_null(setting('instagram')) ? setting('instagram') : config('admin-master.instagram');
     }
 }
 if (! function_exists('youtube')) {
     function youtube()
     {
-        return !is_null(setting('youtube')) ? setting('youtube') : config('lara-admin.youtube');
+        return !is_null(setting('youtube')) ? setting('youtube') : config('admin-master.youtube');
     }
 }
 if (! function_exists('tiktok')) {
     function tiktok()
     {
-        return !is_null(setting('tiktok')) ? setting('tiktok') : config('lara-admin.tiktok');
+        return !is_null(setting('tiktok')) ? setting('tiktok') : config('admin-master.tiktok');
     }
 }
 if (! function_exists('description')) {
     function description()
     {
-        return !is_null(setting('description')) ? setting('description') : config('lara-admin.description');
+        return !is_null(setting('description')) ? setting('description') : config('admin-master.description');
     }
 }
 if (! function_exists('about_image')) {
     function about_image()
     {
-        return getImg(! is_null(setting('about_image')) ? setting('about_image') : config('lara-admin.logo', 'lara-admin/assets/static-img/logo.png'), config('lara-admin.logo', 'lara-admin/assets/static-img/logo.png'));
+        return getImg(! is_null(setting('about_image')) ? setting('about_image') : config('admin-master.logo', 'admin-master/assets/static-img/logo.png'), config('admin-master.logo', 'admin-master/assets/static-img/logo.png'));
 
     }
 }
@@ -191,7 +191,7 @@ if (! function_exists('about_image')) {
 if (! function_exists('getting_section')) {
     function getting_section()
     {
-        return getImg(! is_null(setting('getting_section')) ? setting('getting_section') : config('lara-admin.logo', 'lara-admin/assets/static-img/logo.png'), config('lara-admin.logo', 'lara-admin/assets/static-img/logo.png'));
+        return getImg(! is_null(setting('getting_section')) ? setting('getting_section') : config('admin-master.logo', 'admin-master/assets/static-img/logo.png'), config('admin-master.logo', 'admin-master/assets/static-img/logo.png'));
 
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Mixins;
+namespace SujanSht\AdminMaster\Mixins;
 
-use SujanSht\LaraAdmin\Http\Controllers\admin\DashboardController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\MenuController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\PermissionController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\RoleController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\UserController;
+use SujanSht\AdminMaster\Http\Controllers\admin\DashboardController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\MenuController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\PermissionController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\RoleController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 class AdminRouteMixins

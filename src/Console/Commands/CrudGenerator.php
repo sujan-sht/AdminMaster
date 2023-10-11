@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Console\Commands;
+namespace SujanSht\AdminMaster\Console\Commands;
 
-use SujanSht\LaraAdmin\Services\CrudService;
+use SujanSht\AdminMaster\Services\CrudService;
 use Illuminate\Console\Command;
 
 class CrudGenerator extends Command

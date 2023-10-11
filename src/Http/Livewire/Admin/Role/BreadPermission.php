@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Livewire\Admin\Role;
+namespace SujanSht\AdminMaster\Http\Livewire\Admin\Role;
 
-use SujanSht\LaraAdmin\Models\Admin\Permission;
+use SujanSht\AdminMaster\Models\Admin\Permission;
 use Livewire\Component;
 
 class BreadPermission extends Component
@@ -76,6 +76,6 @@ class BreadPermission extends Component
 
     public function render()
     {
-        return view('lara-admin::livewire.admin.role.bread-permission');
+        return view('admin-master::livewire.admin.role.bread-permission');
     }
 }

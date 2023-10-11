@@ -1,13 +1,13 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Repositories;
+namespace SujanSht\AdminMaster\Repositories;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Artisan;
-use SujanSht\LaraAdmin\Models\Admin\Setting;
-use SujanSht\LaraAdmin\Http\Requests\SettingRequest;
-use SujanSht\LaraAdmin\Contracts\SettingRepositoryInterface;
+use SujanSht\AdminMaster\Models\Admin\Setting;
+use SujanSht\AdminMaster\Http\Requests\SettingRequest;
+use SujanSht\AdminMaster\Contracts\SettingRepositoryInterface;
 
 class SettingRepository implements SettingRepositoryInterface
 {

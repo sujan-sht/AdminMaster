@@ -80,7 +80,7 @@ class modelNameTable extends DataTableComponent
                 ->searchable(),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="pluralModelName" :show="true" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-admin-master-action :model="$model" route="pluralModelName" :show="true" />', ['model' => $row])
                 )
                 ->html(),
         ];

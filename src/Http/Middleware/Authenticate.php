@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Middleware;
+namespace SujanSht\AdminMaster\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Request;

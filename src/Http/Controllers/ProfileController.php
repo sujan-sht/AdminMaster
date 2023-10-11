@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers;
+namespace SujanSht\AdminMaster\Http\Controllers;
 
-use SujanSht\LaraAdmin\Http\Requests\ProfileUpdateRequest;
+use SujanSht\AdminMaster\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

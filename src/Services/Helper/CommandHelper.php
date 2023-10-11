@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Services\Helper;
+namespace SujanSht\AdminMaster\Services\Helper;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;

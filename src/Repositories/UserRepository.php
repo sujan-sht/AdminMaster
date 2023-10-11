@@ -1,13 +1,13 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Repositories;
+namespace SujanSht\AdminMaster\Repositories;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Cache;
-use SujanSht\LaraAdmin\Models\Admin\Role;
-use SujanSht\LaraAdmin\Http\Requests\UserRequest;
-use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
+use SujanSht\AdminMaster\Models\Admin\Role;
+use SujanSht\AdminMaster\Http\Requests\UserRequest;
+use SujanSht\AdminMaster\Contracts\UserRepositoryInterface;
 
 class UserRepository implements UserRepositoryInterface
 {

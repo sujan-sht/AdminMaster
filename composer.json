@@ -1,11 +1,11 @@
 {
-    "name": "sujan-sht/lara-admin",
+    "name": "sujan-sht/admin-master",
     "description": "Laravel Admin Panel",
     "keywords": [
         "sujan-sht",
-        "lara-admin"
+        "admin-master"
     ],
-    "homepage": "https://github.com/sujan-sht/lara-admin",
+    "homepage": "https://github.com/sujan-sht/admin-master",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -28,9 +28,9 @@
     },
     "autoload": {
         "psr-4": {
-            "SujanSht\\LaraAdmin\\": "src",
-            "SujanSht\\LaraAdmin\\Database\\Seeders\\": "database/seeders/",
-            "SujanSht\\LaraAdmin\\Mixins\\": "app/Mixins/"
+            "SujanSht\\AdminMaster\\": "src",
+            "SujanSht\\AdminMaster\\Database\\Seeders\\": "database/seeders/",
+            "SujanSht\\AdminMaster\\Mixins\\": "app/Mixins/"
         },
         "files": [
             "src/Helpers/adminRouteHelper.php",
@@ -39,7 +39,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SujanSht\\LaraAdmin\\Tests\\": "tests"
+            "SujanSht\\AdminMaster\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -53,7 +53,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SujanSht\\LaraAdmin\\Providers\\LaraAdminServiceProvider"
+                "SujanSht\\AdminMaster\\Providers\\AdminMasterServiceProvider"
             ]
         }
     }

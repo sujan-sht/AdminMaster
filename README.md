@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sujan-sht/lara-admin.svg?style=flat-square)](https://packagist.org/packages/sujan-sht/lara-admin)
-[![Total Downloads](https://img.shields.io/packagist/dt/sujan-sht/lara-admin.svg?style=flat-square)](https://packagist.org/packages/sujan-sht/lara-admin)
-![GitHub Actions](https://github.com/sujan-sht/lara-admin/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sujan-sht/admin-master.svg?style=flat-square)](https://packagist.org/packages/sujan-sht/admin-master)
+[![Total Downloads](https://img.shields.io/packagist/dt/sujan-sht/admin-master.svg?style=flat-square)](https://packagist.org/packages/sujan-sht/admin-master)
+![GitHub Actions](https://github.com/sujan-sht/admin-master/actions/workflows/main.yml/badge.svg)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
@@ -11,7 +11,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require sujan-sht/lara-admin
+composer require sujan-sht/admin-master
 ```
 
 ## Usage

@@ -1,9 +1,9 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Contracts;
+namespace SujanSht\AdminMaster\Contracts;
 
-use SujanSht\LaraAdmin\Http\Requests\RoleRequest;
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Http\Requests\RoleRequest;
+use SujanSht\AdminMaster\Models\Admin\Role;
 
 interface RoleRepositoryInterface
 {

@@ -1,5 +1,5 @@
 @php
-    use SujanSht\LaraAdmin\Models\Admin\Setting;
+    use SujanSht\AdminMaster\Models\Admin\Setting;
 @endphp
 <div class="row">
 
@@ -82,7 +82,7 @@
         <input name="new_setting_group" class="form-control btn-square" id="new_setting_group" type="text" placeholder="Enter New Setting Group" value="{{ old('new_setting_group') }}">
     </div>
     <div class="row">
-        <x-lara-admin-add-edit-button :model="$model ?? ''" name="setting"></x-add-edit-button>
+        <x-admin-master-add-edit-button :model="$model ?? ''" name="setting"></x-add-edit-button>
     </div>
 </div>
 

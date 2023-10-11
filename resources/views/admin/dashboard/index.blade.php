@@ -1,4 +1,4 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
 
@@ -435,7 +435,7 @@
                         <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
                         <div class="timeline-item-info">
                             <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">You sold an item</a>
-                            <small>Paul Burgess just purchased “LaraAdmin - Admin Dashboard”!</small>
+                            <small>Paul Burgess just purchased “AdminMaster - Admin Dashboard”!</small>
                             <p class="mb-0 pb-2">
                                 <small class="text-muted">5 minutes ago</small>
                             </p>
@@ -485,7 +485,7 @@
                         <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
                         <div class="timeline-item-info">
                             <a href="javascript:void(0);" class="text-info fw-bold mb-1 d-block">You sold an item</a>
-                            <small>Paul Burgess just purchased “LaraAdmin - Admin Dashboard”!</small>
+                            <small>Paul Burgess just purchased “AdminMaster - Admin Dashboard”!</small>
                             <p class="mb-0 pb-2">
                                 <small class="text-muted">16 hours ago</small>
                             </p>

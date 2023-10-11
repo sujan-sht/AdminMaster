@@ -59,7 +59,7 @@
                 <p class="lead"><i class="mdi mdi-format-quote-open"></i> It's a elegent templete. I love it very much! . <i class="mdi mdi-format-quote-close"></i>
                 </p>
                 <p>
-                    - LaraAdmin Admin User
+                    - AdminMaster Admin User
                 </p>
             </div> <!-- end auth-user-testimonial-->
         </div>

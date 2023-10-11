@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Middleware;
+namespace SujanSht\AdminMaster\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance as Middleware;
 

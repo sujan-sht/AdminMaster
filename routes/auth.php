@@ -1,14 +1,14 @@
 <?php
 
-use SujanSht\LaraAdmin\Http\Controllers\Auth\AuthenticatedSessionController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\ConfirmablePasswordController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationNotificationController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationPromptController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\NewPasswordController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\PasswordController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\PasswordResetLinkController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\RegisteredUserController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\VerifyEmailController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\AuthenticatedSessionController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\ConfirmablePasswordController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\EmailVerificationNotificationController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\EmailVerificationPromptController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\NewPasswordController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\PasswordController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\PasswordResetLinkController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\RegisteredUserController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('web')->group(function () {

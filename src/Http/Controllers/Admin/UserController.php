@@ -1,10 +1,10 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Admin;
+namespace SujanSht\AdminMaster\Http\Controllers\Admin;
 
-use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Http\Requests\UserRequest;
+use SujanSht\AdminMaster\Contracts\UserRepositoryInterface;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -22,7 +22,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('lara-admin::admin.user.index',$this->userRepositoryInterface->indexUser());
+        return view('admin-master::admin.user.index',$this->userRepositoryInterface->indexUser());
     }
 
     /**
@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('lara-admin::admin.user.create',$this->userRepositoryInterface->createUser());
+        return view('admin-master::admin.user.create',$this->userRepositoryInterface->createUser());
     }
 
     /**
@@ -47,7 +47,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('lara-admin::admin.user.show',$this->userRepositoryInterface->showUser($user));
+        return view('admin-master::admin.user.show',$this->userRepositoryInterface->showUser($user));
     }
 
     /**
@@ -55,7 +55,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('lara-admin::admin.user.edit',$this->userRepositoryInterface->editUser($user));
+        return view('admin-master::admin.user.edit',$this->userRepositoryInterface->editUser($user));
     }
 
     /**

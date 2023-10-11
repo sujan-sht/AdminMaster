@@ -1,43 +1,43 @@
 
  <!-- Vendor js -->
- <script src="{{asset('lara-admin/assets/js/vendor.min.js')}}"></script>
+ <script src="{{asset('admin-master/assets/js/vendor.min.js')}}"></script>
 
- {{-- <script src="{{asset('lara-admin/assets/vendor/highlightjs/highlight.pack.min.js')}}"></script> --}}
- {{-- <script src="{{asset('lara-admin/assets/js/hyper-syntax.js')}}"></script> --}}
+ {{-- <script src="{{asset('admin-master/assets/vendor/highlightjs/highlight.pack.min.js')}}"></script> --}}
+ {{-- <script src="{{asset('admin-master/assets/js/hyper-syntax.js')}}"></script> --}}
 
- <script src="{{asset('lara-admin/assets/vendor/daterangepicker/moment.min.js')}}"></script>
-<script src="{{asset('lara-admin/assets/vendor/daterangepicker/daterangepicker.js')}}"></script>
+ <script src="{{asset('admin-master/assets/vendor/daterangepicker/moment.min.js')}}"></script>
+<script src="{{asset('admin-master/assets/vendor/daterangepicker/daterangepicker.js')}}"></script>
 
-<script src="{{asset('lara-admin/assets/js/spartan/spartan-multi-image-picker-min.js')}}"></script>
+<script src="{{asset('admin-master/assets/js/spartan/spartan-multi-image-picker-min.js')}}"></script>
 
-<script src="{{ asset('lara-admin/assets/js/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('admin-master/assets/js/ckeditor/ckeditor.js') }}"></script>
 
 
  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
 
- <script src="{{asset('lara-admin/assets/vendor/jquery-toast-plugin/jquery.toast.min.js')}}"></script>
+ <script src="{{asset('admin-master/assets/vendor/jquery-toast-plugin/jquery.toast.min.js')}}"></script>
  <!--  Select2 Plugin Js -->
- <script src="{{asset('lara-admin/assets/vendor/select2/js/select2.min.js')}}"></script>
+ <script src="{{asset('admin-master/assets/vendor/select2/js/select2.min.js')}}"></script>
 
 <!-- Apex Charts js -->
-<script src="{{asset('lara-admin/assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
+<script src="{{asset('admin-master/assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
 
-<script src="{{asset('lara-admin/assets/dist/iconpicker-1.5.0.js')}}"></script>
+<script src="{{asset('admin-master/assets/dist/iconpicker-1.5.0.js')}}"></script>
 
  <!-- Vector Map js -->
- <script src="{{asset('lara-admin/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
- <script src="{{asset('lara-admin/assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js')}}"></script>
+ <script src="{{asset('admin-master/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+ <script src="{{asset('admin-master/assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js')}}"></script>
 
- <script src="{{asset('lara-admin/assets/js/pages/demo.remixicons.js')}}"></script>
+ <script src="{{asset('admin-master/assets/js/pages/demo.remixicons.js')}}"></script>
 
 
  <!-- Dashboard App js -->
- <script src="{{asset('lara-admin/assets/js/pages/demo.dashboard.js')}}"></script>
+ <script src="{{asset('admin-master/assets/js/pages/demo.dashboard.js')}}"></script>
 
 
 
  <!-- App js -->
- <script src="{{asset('lara-admin/assets/js/app.min.js')}}"></script>
+ <script src="{{asset('admin-master/assets/js/app.min.js')}}"></script>
 
 
  @yield('scripts')
@@ -95,7 +95,7 @@
 <script>
     // Font Selector
     IconPicker.Init({
-        jsonUrl: "{{ asset('lara-admin/assets/dist/iconpicker-1.5.0.json') }}",
+        jsonUrl: "{{ asset('admin-master/assets/dist/iconpicker-1.5.0.json') }}",
         searchPlaceholder: 'Search Icon',
         showAllButton: 'Show All',
         cancelButton: 'Cancel',

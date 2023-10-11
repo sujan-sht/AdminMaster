@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Console\Commands;
+namespace SujanSht\AdminMaster\Console\Commands;
 
-use SujanSht\LaraAdmin\Services\Helper\CommandHelper;
+use SujanSht\AdminMaster\Services\Helper\CommandHelper;
 use Illuminate\Console\Command;
 
 class GenerateService extends Command

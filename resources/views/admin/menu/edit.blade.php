@@ -1,10 +1,10 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
 
-<x-lara-admin-edit-page name="menu" route="menus" :model="$menu">
+<x-admin-master-edit-page name="menu" route="menus" :model="$menu">
    <x-slot name="content">
-        @include('lara-admin::admin.layouts.modules.menu.form')
+        @include('admin-master::admin.layouts.modules.menu.form')
    </x-slot>
-</x-lara-admin-edit-page>
+</x-admin-master-edit-page>
 @endsection

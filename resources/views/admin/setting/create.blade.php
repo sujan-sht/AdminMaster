@@ -1,9 +1,9 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
-<x-lara-admin-create-page name="setting" route="settings">
+<x-admin-master-create-page name="setting" route="settings">
     <x-slot name="content">
-         @include('lara-admin::admin.layouts.modules.setting.form')
+         @include('admin-master::admin.layouts.modules.setting.form')
     </x-slot>
- </x-lara-admin-create-page>
+ </x-admin-master-create-page>
 @endsection

@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Requests;
+namespace SujanSht\AdminMaster\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

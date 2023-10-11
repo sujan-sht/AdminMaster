@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Traits;
+namespace SujanSht\AdminMaster\Traits;
 
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Models\Admin\Role;
 
 trait HasRole
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Contracts;
+namespace SujanSht\AdminMaster\Contracts;
 
-use SujanSht\LaraAdmin\Http\Requests\UserRequest;
+use SujanSht\AdminMaster\Http\Requests\UserRequest;
 use App\Models\User;
 
 interface UserRepositoryInterface

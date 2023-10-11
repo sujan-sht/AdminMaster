@@ -1,18 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\VerifyEmailController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\ConfirmablePasswordController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\AuthenticatedSessionController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationPromptController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\EmailVerificationNotificationController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\MenuController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\RoleController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\UserController;
-use SujanSht\LaraAdmin\Http\Controllers\Auth\PasswordController;
-use SujanSht\LaraAdmin\Http\Controllers\admin\DashboardController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\PermissionController;
-use SujanSht\LaraAdmin\Http\Controllers\Admin\SettingController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\VerifyEmailController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\ConfirmablePasswordController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\AuthenticatedSessionController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\EmailVerificationPromptController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\EmailVerificationNotificationController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\MenuController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\RoleController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\UserController;
+use SujanSht\AdminMaster\Http\Controllers\Auth\PasswordController;
+use SujanSht\AdminMaster\Http\Controllers\admin\DashboardController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\PermissionController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\SettingController;
 
 
 /*
@@ -21,7 +21,7 @@ use SujanSht\LaraAdmin\Http\Controllers\Admin\SettingController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the LaraAdminServiceProvider and all of them will
+| routes are loaded by the AdminMasterServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
 */

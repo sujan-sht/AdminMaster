@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Providers;
+namespace SujanSht\AdminMaster\Providers;
 
-use SujanSht\LaraAdmin\Models\Admin\Menu;
+use SujanSht\AdminMaster\Models\Admin\Menu;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 

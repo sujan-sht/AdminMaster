@@ -1,9 +1,9 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
+namespace SujanSht\AdminMaster\Http\Controllers\Auth;
 
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Providers\AdminMasterServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +17,7 @@ class ConfirmablePasswordController extends Controller
      */
     public function show(): View
     {
-        return view('lara-admin::auth.confirm-password');
+        return view('admin-master::auth.confirm-password');
     }
 
     /**
@@ -36,6 +36,6 @@ class ConfirmablePasswordController extends Controller
 
         $request->session()->put('auth.password_confirmed_at', time());
 
-        return redirect()->intended(LaraAdminServiceProvider::HOME);
+        return redirect()->intended(AdminMasterServiceProvider::HOME);
     }
 }

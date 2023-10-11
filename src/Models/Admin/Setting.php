@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Models\Admin;
+namespace SujanSht\AdminMaster\Models\Admin;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

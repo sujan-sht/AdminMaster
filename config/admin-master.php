@@ -11,11 +11,11 @@ return [
     |
     */
     // site information
-    'title' => env('APP_NAME', 'Lara Admin'),
-    'logo' => 'lara-admin/assets/static-img/logo.png',
-    'favicon' => 'lara-admin/assets/static-img/favicon.png',
-    'meta_description' => 'Lara Admin|Laravel Admin Panel',
-    'keywords' => 'Lara Admin, Admin Panel',
+    'title' => env('APP_NAME', 'Admin Master'),
+    'logo' => 'admin-master/assets/static-img/logo.png',
+    'favicon' => 'admin-master/assets/static-img/favicon.png',
+    'meta_description' => 'Admin Master|Laravel Admin Panel',
+    'keywords' => 'Admin Master, Admin Panel',
     'address' => 'Kathmandu, Nepal',
     'phone' => '9812345678',
     'facebook' => 'https://facebook.com/',

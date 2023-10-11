@@ -1,11 +1,11 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Admin;
+namespace SujanSht\AdminMaster\Http\Controllers\Admin;
 
-use SujanSht\LaraAdmin\Contracts\RoleRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Http\Requests\RoleRequest;
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Contracts\RoleRepositoryInterface;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Http\Requests\RoleRequest;
+use SujanSht\AdminMaster\Models\Admin\Role;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -22,7 +22,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return view('lara-admin::admin.role.index',$this->roleRepositoryInterface->indexRole());
+        return view('admin-master::admin.role.index',$this->roleRepositoryInterface->indexRole());
     }
 
     /**
@@ -30,7 +30,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('lara-admin::admin.role.create');
+        return view('admin-master::admin.role.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        return view('lara-admin::admin.role.show',$this->roleRepositoryInterface->showRole($role));
+        return view('admin-master::admin.role.show',$this->roleRepositoryInterface->showRole($role));
     }
 
     /**
@@ -55,7 +55,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        return view('lara-admin::admin.role.edit',$this->roleRepositoryInterface->editRole($role));
+        return view('admin-master::admin.role.edit',$this->roleRepositoryInterface->editRole($role));
     }
 
     /**

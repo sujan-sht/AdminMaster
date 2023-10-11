@@ -7,17 +7,17 @@
             <img src="{{logo()}}" alt="{{title()}}" height="80" width="80%">
         </span>
         <span class="logo-sm">
-            <img src="{{asset('lara-admin/assets/images/logo-sm.png')}}" alt="small logo" height="22">
+            <img src="{{asset('admin-master/assets/images/logo-sm.png')}}" alt="small logo" height="22">
         </span>
     </a>
 
     <!-- Logo Dark -->
     <a href="{{route('dashboard')}}" class="logo logo-dark">
         <span class="logo-lg">
-            <img src="{{asset('lara-admin/assets/images/logo-dark.png')}}" alt="dark logo" height="22">
+            <img src="{{asset('admin-master/assets/images/logo-dark.png')}}" alt="dark logo" height="22">
         </span>
         <span class="logo-sm">
-            <img src="{{asset('lara-admin/assets/images/logo-dark-sm.png')}}" alt="small logo" height="22">
+            <img src="{{asset('admin-master/assets/images/logo-dark-sm.png')}}" alt="small logo" height="22">
         </span>
     </a>
 
@@ -31,7 +31,7 @@
         <!-- Leftbar User -->
         <div class="leftbar-user">
             <a href="pages-profile.html">
-                <img src="{{asset('lara-admin/assets/images/users/avatar-1.jpg')}}" alt="user-image" height="42"
+                <img src="{{asset('admin-master/assets/images/users/avatar-1.jpg')}}" alt="user-image" height="42"
                     class="rounded-circle shadow-sm">
                 <span class="leftbar-user-name">Dominic Keller</span>
             </a>

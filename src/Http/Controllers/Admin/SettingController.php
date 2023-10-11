@@ -1,11 +1,11 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Admin;
+namespace SujanSht\AdminMaster\Http\Controllers\Admin;
 
-use SujanSht\LaraAdmin\Contracts\SettingRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Http\Requests\SettingRequest;
-use SujanSht\LaraAdmin\Models\Admin\Setting;
+use SujanSht\AdminMaster\Contracts\SettingRepositoryInterface;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Http\Requests\SettingRequest;
+use SujanSht\AdminMaster\Models\Admin\Setting;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
@@ -22,7 +22,7 @@ class SettingController extends Controller
      */
     public function index()
     {
-        return view('lara-admin::admin.setting.index',$this->settingRepositoryInterface->indexSetting());
+        return view('admin-master::admin.setting.index',$this->settingRepositoryInterface->indexSetting());
     }
 
     /**
@@ -30,7 +30,7 @@ class SettingController extends Controller
      */
     public function create()
     {
-        return view('lara-admin::admin.setting.create',$this->settingRepositoryInterface->createSetting());
+        return view('admin-master::admin.setting.create',$this->settingRepositoryInterface->createSetting());
     }
 
     /**
@@ -47,7 +47,7 @@ class SettingController extends Controller
      */
     public function show(Setting $setting)
     {
-        return view('lara-admin::admin.setting.show',$this->settingRepositoryInterface->showSetting($setting));
+        return view('admin-master::admin.setting.show',$this->settingRepositoryInterface->showSetting($setting));
     }
 
     /**
@@ -55,7 +55,7 @@ class SettingController extends Controller
      */
     public function edit(Setting $setting)
     {
-        return view('lara-admin::admin.setting.edit',$this->settingRepositoryInterface->editSetting($setting));
+        return view('admin-master::admin.setting.edit',$this->settingRepositoryInterface->editSetting($setting));
     }
 
     /**

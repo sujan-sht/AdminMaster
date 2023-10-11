@@ -1,9 +1,9 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Contracts;
+namespace SujanSht\AdminMaster\Contracts;
 
-use SujanSht\LaraAdmin\Http\Requests\PermissionRequest;
-use SujanSht\LaraAdmin\Models\Admin\Permission;
+use SujanSht\AdminMaster\Http\Requests\PermissionRequest;
+use SujanSht\AdminMaster\Models\Admin\Permission;
 
 interface PermissionRepositoryInterface
 {

@@ -4,8 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use SujanSht\LaraAdmin\Models\Admin\Permission;
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Models\Admin\Permission;
+use SujanSht\AdminMaster\Models\Admin\Role;
 
 class PermissionSeeder extends Seeder
 {

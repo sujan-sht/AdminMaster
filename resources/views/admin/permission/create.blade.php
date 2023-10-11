@@ -1,9 +1,9 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
-<x-lara-admin-create-page name="permission" route="permissions">
+<x-admin-master-create-page name="permission" route="permissions">
    <x-slot name="content">
-        @include('lara-admin::admin.layouts.modules.permission.form')
+        @include('admin-master::admin.layouts.modules.permission.form')
    </x-slot>
-</x-lara-admin-create-page>
+</x-admin-master-create-page>
 @endsection

@@ -1,10 +1,10 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Repositories;
+namespace SujanSht\AdminMaster\Repositories;
 
-use SujanSht\LaraAdmin\Models\Admin\Role;
-use SujanSht\LaraAdmin\Contracts\RoleRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Requests\RoleRequest;
+use SujanSht\AdminMaster\Models\Admin\Role;
+use SujanSht\AdminMaster\Contracts\RoleRepositoryInterface;
+use SujanSht\AdminMaster\Http\Requests\RoleRequest;
 
 class RoleRepository implements RoleRepositoryInterface
 {

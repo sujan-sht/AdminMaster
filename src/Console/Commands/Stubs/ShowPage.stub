@@ -1,9 +1,9 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
-<x-lara-admin-show-page name="lowercaseModelName" route="pluralModelName">
+<x-admin-master-show-page name="lowercaseModelName" route="pluralModelName">
    <x-slot name="content">
 
    </x-slot>
-</x-lara-admin-show-page>
+</x-admin-master-show-page>
 @endsection

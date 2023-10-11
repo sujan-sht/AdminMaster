@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Livewire\Admin\Media;
+namespace SujanSht\AdminMaster\Http\Livewire\Admin\Media;
 
 use Livewire\Component;
 
@@ -17,6 +17,6 @@ class SpartanImageUpload extends Component
 
     public function render()
     {
-        return view('lara-admin::livewire.admin.media.spartan-image-upload');
+        return view('admin-master::livewire.admin.media.spartan-image-upload');
     }
 }

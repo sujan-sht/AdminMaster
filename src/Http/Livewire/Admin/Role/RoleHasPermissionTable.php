@@ -1,9 +1,9 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Livewire\Admin\Role;
+namespace SujanSht\AdminMaster\Http\Livewire\Admin\Role;
 
-use SujanSht\LaraAdmin\Models\Admin\Permission;
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Models\Admin\Permission;
+use SujanSht\AdminMaster\Models\Admin\Role;
 use Livewire\Component;
 
 class RoleHasPermissionTable extends Component
@@ -39,7 +39,7 @@ class RoleHasPermissionTable extends Component
     }
     public function render()
     {
-        return view('lara-admin::livewire.admin.role.role-has-permission-table');
+        return view('admin-master::livewire.admin.role.role-has-permission-table');
     }
 
     private function setRolePermission(Role $role)

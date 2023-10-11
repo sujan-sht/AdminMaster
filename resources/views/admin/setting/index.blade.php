@@ -1,10 +1,10 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
 @php
-    use SujanSht\LaraAdmin\Models\Admin\Setting;
+    use SujanSht\AdminMaster\Models\Admin\Setting;
 @endphp
-    <x-lara-admin-index-page name="setting" route="settings">
+    <x-admin-master-index-page name="setting" route="settings">
         <x-slot name="content">
             <div class="row">
                 <div class="col-12">
@@ -52,25 +52,25 @@
                                                     <div class="tab-pane {{$loop->first ? 'show active' : ''}}" id="{{ strtolower(str_replace(' ', '_', $key)) }}">
                                                         @foreach ($group as $setting)
                                                             @if ($setting->getRawOriginal('setting_type') == Setting::STRING)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.string')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.string')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::INTEGER)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.integer')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.integer')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::TEXT)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.text')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.text')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::TEXTEDITOR)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.rich_text')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.rich_text')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::SWITCH)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.switch')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.switch')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::CHECKBOX)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.checkbox')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.checkbox')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::SELECT)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.select')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.select')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::MULTIPLE)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.multiple')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.multiple')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::TAG)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.tag')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.tag')
                                                             @elseif ($setting->getRawOriginal ('setting_type') == Setting::IMAGE)
-                                                                @include('lara-admin::admin.layouts.modules.setting.components.image')
+                                                                @include('admin-master::admin.layouts.modules.setting.components.image')
                                                             @endif
                                                         @endforeach
                                                     </div>
@@ -98,8 +98,8 @@
                 </div> <!-- end col -->
             </div>
         </x-slot>
-    </x-lara-admin-index-page>
+    </x-admin-master-index-page>
 @endsection
 @section('scripts')
-@include('lara-admin::admin.layouts.modules.setting.scripts')
+@include('admin-master::admin.layouts.modules.setting.scripts')
 @endsection

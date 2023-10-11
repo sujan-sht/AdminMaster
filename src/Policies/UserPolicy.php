@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Policies;
+namespace SujanSht\AdminMaster\Policies;
 
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;

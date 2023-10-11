@@ -1,7 +1,7 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Services;
-use SujanSht\LaraAdmin\Services\Helper\CommandHelper;
+namespace SujanSht\AdminMaster\Services;
+use SujanSht\AdminMaster\Services\Helper\CommandHelper;
 use Illuminate\Support\Facades\Artisan;
 
 class RepositoryPatternService extends CommandHelper

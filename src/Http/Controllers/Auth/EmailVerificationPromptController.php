@@ -1,9 +1,9 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
+namespace SujanSht\AdminMaster\Http\Controllers\Auth;
 
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Providers\AdminMasterServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -16,7 +16,7 @@ class EmailVerificationPromptController extends Controller
     public function __invoke(Request $request): RedirectResponse|View
     {
         return $request->user()->hasVerifiedEmail()
-                    ? redirect()->intended(LaraAdminServiceProvider::HOME)
+                    ? redirect()->intended(AdminMasterServiceProvider::HOME)
                     : view('auth.verify-email');
     }
 }

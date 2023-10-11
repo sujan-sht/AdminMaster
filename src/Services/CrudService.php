@@ -1,9 +1,9 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Services;
+namespace SujanSht\AdminMaster\Services;
 
-use SujanSht\LaraAdmin\Models\Admin\Menu;
-use SujanSht\LaraAdmin\Services\Helper\CommandHelper;
+use SujanSht\AdminMaster\Models\Admin\Menu;
+use SujanSht\AdminMaster\Services\Helper\CommandHelper;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 

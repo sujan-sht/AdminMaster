@@ -1,10 +1,10 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Livewire\Admin\Menu;
+namespace SujanSht\AdminMaster\Http\Livewire\Admin\Menu;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Builder;
-use SujanSht\LaraAdmin\Models\Admin\Menu;
+use SujanSht\AdminMaster\Models\Admin\Menu;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Filters\SelectFilter;
@@ -79,7 +79,7 @@ class MenuTable extends DataTableComponent
             BooleanColumn::make('Active', 'active'),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="menus" :show="false" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-admin-master-action :model="$model" route="menus" :show="false" />', ['model' => $row])
                 )
                 ->html(),
         ];

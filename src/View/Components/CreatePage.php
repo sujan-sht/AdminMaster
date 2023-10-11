@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\View\Components;
+namespace SujanSht\AdminMaster\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -30,6 +30,6 @@ class CreatePage extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('lara-admin::components.create-page');
+        return view('admin-master::components.create-page');
     }
 }

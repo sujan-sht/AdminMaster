@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Providers;
+namespace SujanSht\AdminMaster\Providers;
 
 use App\Models\User;
 
@@ -10,46 +10,46 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use SujanSht\LaraAdmin\Models\Admin\Menu;
-use SujanSht\LaraAdmin\Models\Admin\Role;
-use SujanSht\LaraAdmin\Policies\MenuPolicy;
-use SujanSht\LaraAdmin\Policies\RolePolicy;
-use SujanSht\LaraAdmin\Policies\UserPolicy;
-use SujanSht\LaraAdmin\Models\Admin\Setting;
-use SujanSht\LaraAdmin\Policies\SettingPolicy;
-use SujanSht\LaraAdmin\View\Components\Action;
-use SujanSht\LaraAdmin\Models\Admin\Permission;
-use SujanSht\LaraAdmin\View\Components\EditPage;
-use SujanSht\LaraAdmin\View\Components\ShowPage;
-use SujanSht\LaraAdmin\Policies\PermissionPolicy;
-use SujanSht\LaraAdmin\View\Components\IndexPage;
-use SujanSht\LaraAdmin\View\Components\CreatePage;
-use SujanSht\LaraAdmin\Repositories\MenuRepository;
-use SujanSht\LaraAdmin\Repositories\RoleRepository;
-use SujanSht\LaraAdmin\Repositories\UserRepository;
-use SujanSht\LaraAdmin\View\Components\ImageUpload;
-use SujanSht\LaraAdmin\View\Components\AddEditButton;
-use SujanSht\LaraAdmin\Console\Commands\CrudGenerator;
-use SujanSht\LaraAdmin\Repositories\SettingRepository;
-use SujanSht\LaraAdmin\Console\Commands\GenerateService;
-use SujanSht\LaraAdmin\Contracts\MenuRepositoryInterface;
-use SujanSht\LaraAdmin\Contracts\RoleRepositoryInterface;
-use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
-use SujanSht\LaraAdmin\Repositories\PermissionRepository;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Menu\MenuTable;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleTable;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\User\UserTable;
-use SujanSht\LaraAdmin\Contracts\SettingRepositoryInterface;
-use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\BreadPermission;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Setting\SettingTable;
-use SujanSht\LaraAdmin\Console\Commands\RepositoryPatternGenerator;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Media\SpartanImageUpload;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Media\VideoLink;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Permission\PermissionTable;
-use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleHasPermissionTable;
+use SujanSht\AdminMaster\Models\Admin\Menu;
+use SujanSht\AdminMaster\Models\Admin\Role;
+use SujanSht\AdminMaster\Policies\MenuPolicy;
+use SujanSht\AdminMaster\Policies\RolePolicy;
+use SujanSht\AdminMaster\Policies\UserPolicy;
+use SujanSht\AdminMaster\Models\Admin\Setting;
+use SujanSht\AdminMaster\Policies\SettingPolicy;
+use SujanSht\AdminMaster\View\Components\Action;
+use SujanSht\AdminMaster\Models\Admin\Permission;
+use SujanSht\AdminMaster\View\Components\EditPage;
+use SujanSht\AdminMaster\View\Components\ShowPage;
+use SujanSht\AdminMaster\Policies\PermissionPolicy;
+use SujanSht\AdminMaster\View\Components\IndexPage;
+use SujanSht\AdminMaster\View\Components\CreatePage;
+use SujanSht\AdminMaster\Repositories\MenuRepository;
+use SujanSht\AdminMaster\Repositories\RoleRepository;
+use SujanSht\AdminMaster\Repositories\UserRepository;
+use SujanSht\AdminMaster\View\Components\ImageUpload;
+use SujanSht\AdminMaster\View\Components\AddEditButton;
+use SujanSht\AdminMaster\Console\Commands\CrudGenerator;
+use SujanSht\AdminMaster\Repositories\SettingRepository;
+use SujanSht\AdminMaster\Console\Commands\GenerateService;
+use SujanSht\AdminMaster\Contracts\MenuRepositoryInterface;
+use SujanSht\AdminMaster\Contracts\RoleRepositoryInterface;
+use SujanSht\AdminMaster\Contracts\UserRepositoryInterface;
+use SujanSht\AdminMaster\Repositories\PermissionRepository;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Menu\MenuTable;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Role\RoleTable;
+use SujanSht\AdminMaster\Http\Livewire\Admin\User\UserTable;
+use SujanSht\AdminMaster\Contracts\SettingRepositoryInterface;
+use SujanSht\AdminMaster\Contracts\PermissionRepositoryInterface;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Role\BreadPermission;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Setting\SettingTable;
+use SujanSht\AdminMaster\Console\Commands\RepositoryPatternGenerator;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Media\SpartanImageUpload;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Media\VideoLink;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Permission\PermissionTable;
+use SujanSht\AdminMaster\Http\Livewire\Admin\Role\RoleHasPermissionTable;
 
-class LaraAdminServiceProvider extends ServiceProvider
+class AdminMasterServiceProvider extends ServiceProvider
 {
     // Register Policies
     protected $policies = [
@@ -116,24 +116,24 @@ class LaraAdminServiceProvider extends ServiceProvider
 
         // Publish Config File
         $this->publishes([
-            __DIR__.'/../../config/lara-admin.php' => config_path('lara-admin.php'),
-        ], 'lara-admin-config');
+            __DIR__.'/../../config/admin-master.php' => config_path('admin-master.php'),
+        ], 'admin-master-config');
         // Publish View Files
         $this->publishes([
-            __DIR__.'/../../resources/views' => resource_path('views/vendor/lara-admin'),
-        ], 'lara-admin-views');
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/admin-master'),
+        ], 'admin-master-views');
         // Publish Migration Files
         $this->publishes([
             __DIR__.'/../../database/migrations' => database_path('migrations'),
-        ], 'lara-admin-migrations');
+        ], 'admin-master-migrations');
         // Publish Database Seeds
         $this->publishes([
             __DIR__.'/../../database/seeders' => database_path('seeders'),
-        ], 'lara-admin-seeders');
+        ], 'admin-master-seeders');
         // Publish Public Assets
         $this->publishes([
-            __DIR__.'/../../payload/lara-admin/assets' => public_path('lara-admin/assets'),
-        ], 'lara-admin-assets');
+            __DIR__.'/../../payload/admin-master/assets' => public_path('admin-master/assets'),
+        ], 'admin-master-assets');
 
     }
 
@@ -145,7 +145,7 @@ class LaraAdminServiceProvider extends ServiceProvider
     protected function registerResource()
     {
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations'); // Loading Migration Files
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'lara-admin'); // Loading Views Files
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'admin-master'); // Loading Views Files
         $this->registerRoutes();
     }
 
@@ -233,7 +233,7 @@ class LaraAdminServiceProvider extends ServiceProvider
      */
     protected function registerComponents()
     {
-        $this->loadViewComponentsAs('lara-admin', [
+        $this->loadViewComponentsAs('admin-master', [
             Action::class,
             AddEditButton::class,
             CreatePage::class,

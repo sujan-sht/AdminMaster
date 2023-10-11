@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
+namespace SujanSht\AdminMaster\Http\Controllers\Auth;
 
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
@@ -15,7 +15,7 @@ class PasswordResetLinkController extends Controller
      */
     public function create(): View
     {
-        return view('lara-admin::auth.forgot-password');
+        return view('admin-master::auth.forgot-password');
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Models;
+namespace SujanSht\AdminMaster\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
@@ -8,7 +8,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
-use SujanSht\LaraAdmin\Traits\HasRole;
+use SujanSht\AdminMaster\Traits\HasRole;
 use Illuminate\Notifications\Notifiable;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -72,6 +72,6 @@ class User extends Authenticatable implements HasMedia
     // Accessors
     public function getImageAttribute()
     {
-       return ! is_null($this->getFirstMedia('image')) ? $this->getFirstMediaUrl('image') : asset('lara-admin/assets/static-img/placeholder.jpg');
+       return ! is_null($this->getFirstMedia('image')) ? $this->getFirstMediaUrl('image') : asset('admin-master/assets/static-img/placeholder.jpg');
     }
 }

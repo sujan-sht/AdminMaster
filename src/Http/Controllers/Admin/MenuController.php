@@ -1,11 +1,11 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Admin;
+namespace SujanSht\AdminMaster\Http\Controllers\Admin;
 
-use SujanSht\LaraAdmin\Contracts\MenuRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Http\Requests\MenuRequest;
-use SujanSht\LaraAdmin\Models\Admin\Menu;
+use SujanSht\AdminMaster\Contracts\MenuRepositoryInterface;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Http\Requests\MenuRequest;
+use SujanSht\AdminMaster\Models\Admin\Menu;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -22,7 +22,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('lara-admin::admin.menu.index',$this->menuRepositoryInterface->indexMenu());
+        return view('admin-master::admin.menu.index',$this->menuRepositoryInterface->indexMenu());
     }
 
     /**
@@ -30,7 +30,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-        return view('lara-admin::admin.menu.create');
+        return view('admin-master::admin.menu.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-        return view('lara-admin::admin.menu.show',$this->menuRepositoryInterface->showMenu($menu));
+        return view('admin-master::admin.menu.show',$this->menuRepositoryInterface->showMenu($menu));
     }
 
     /**
@@ -55,7 +55,7 @@ class MenuController extends Controller
      */
     public function edit(Menu $menu)
     {
-        return view('lara-admin::admin.menu.edit',$this->menuRepositoryInterface->editMenu($menu));
+        return view('admin-master::admin.menu.edit',$this->menuRepositoryInterface->editMenu($menu));
     }
 
     /**

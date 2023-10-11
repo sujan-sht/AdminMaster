@@ -1,7 +1,7 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
-<x-lara-admin-show-page name="role" route="roles">
+<x-admin-master-show-page name="role" route="roles">
     <x-slot name="content">
 
         @livewire('admin.role.role-has-permission-table', ['role' => $role])

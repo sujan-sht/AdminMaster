@@ -1,10 +1,10 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Repositories;
+namespace SujanSht\AdminMaster\Repositories;
 
-use SujanSht\LaraAdmin\Models\Admin\Menu;
-use SujanSht\LaraAdmin\Contracts\MenuRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Requests\MenuRequest;
+use SujanSht\AdminMaster\Models\Admin\Menu;
+use SujanSht\AdminMaster\Contracts\MenuRepositoryInterface;
+use SujanSht\AdminMaster\Http\Requests\MenuRequest;
 use Illuminate\Support\Facades\Artisan;
 
 class MenuRepository implements MenuRepositoryInterface

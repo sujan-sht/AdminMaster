@@ -1,11 +1,11 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Admin;
+namespace SujanSht\AdminMaster\Http\Controllers\Admin;
 
-use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Http\Requests\PermissionRequest;
-use SujanSht\LaraAdmin\Models\Admin\Permission;
+use SujanSht\AdminMaster\Contracts\PermissionRepositoryInterface;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Http\Requests\PermissionRequest;
+use SujanSht\AdminMaster\Models\Admin\Permission;
 use Illuminate\Http\Request;
 
 class PermissionController extends Controller
@@ -23,7 +23,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        return view('lara-admin::admin.permission.index',$this->permissionRepositoryInterface->indexPermission());
+        return view('admin-master::admin.permission.index',$this->permissionRepositoryInterface->indexPermission());
     }
 
     /**
@@ -31,7 +31,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('lara-admin::admin.permission.create',$this->permissionRepositoryInterface->createPermission());
+        return view('admin-master::admin.permission.create',$this->permissionRepositoryInterface->createPermission());
     }
 
     /**
@@ -48,7 +48,7 @@ class PermissionController extends Controller
      */
     public function show(Permission $permission)
     {
-        return view('lara-admin::admin.permission.show',$this->permissionRepositoryInterface->showPermission($permission));
+        return view('admin-master::admin.permission.show',$this->permissionRepositoryInterface->showPermission($permission));
     }
 
     /**
@@ -56,7 +56,7 @@ class PermissionController extends Controller
      */
     public function edit(Permission $permission)
     {
-        return view('lara-admin::admin.permission.edit',$this->permissionRepositoryInterface->editPermission($permission));
+        return view('admin-master::admin.permission.edit',$this->permissionRepositoryInterface->editPermission($permission));
     }
 
     /**

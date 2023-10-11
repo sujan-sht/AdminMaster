@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Livewire\Admin\Media;
+namespace SujanSht\AdminMaster\Http\Livewire\Admin\Media;
 
 use Livewire\Component;
 
@@ -38,7 +38,7 @@ class VideoLink extends Component
 
     public function render()
     {
-        return view('lara-admin::livewire.admin.media.video-link');
+        return view('admin-master::livewire.admin.media.video-link');
     }
 
 }

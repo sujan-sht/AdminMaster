@@ -1,9 +1,9 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Contracts;
+namespace SujanSht\AdminMaster\Contracts;
 
-use SujanSht\LaraAdmin\Http\Requests\MenuRequest;
-use SujanSht\LaraAdmin\Models\Admin\Menu;
+use SujanSht\AdminMaster\Http\Requests\MenuRequest;
+use SujanSht\AdminMaster\Models\Admin\Menu;
 
 interface MenuRepositoryInterface
 {

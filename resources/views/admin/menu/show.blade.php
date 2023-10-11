@@ -1,7 +1,7 @@
-@extends('lara-admin::admin.layouts.app')
+@extends('admin-master::admin.layouts.app')
 
 @section('content')
-<x-lara-admin-show-page name="menu" route="menus">
+<x-admin-master-show-page name="menu" route="menus">
    <x-slot name="content">
 
    </x-slot>

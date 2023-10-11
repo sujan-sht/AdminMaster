@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\View\Components;
+namespace SujanSht\AdminMaster\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -25,6 +25,6 @@ class AddEditButton extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('lara-admin::components.add-edit-button');
+        return view('admin-master::components.add-edit-button');
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Policies;
+namespace SujanSht\AdminMaster\Policies;
 
-use SujanSht\LaraAdmin\Models\Admin\Menu;
+use SujanSht\AdminMaster\Models\Admin\Menu;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Auth\Access\Response;

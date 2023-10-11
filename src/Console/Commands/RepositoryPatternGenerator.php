@@ -1,8 +1,8 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Console\Commands;
+namespace SujanSht\AdminMaster\Console\Commands;
 
-use SujanSht\LaraAdmin\Services\RepositoryPatternService;
+use SujanSht\AdminMaster\Services\RepositoryPatternService;
 use Illuminate\Console\Command;
 
 class RepositoryPatternGenerator extends Command

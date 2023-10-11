@@ -1,10 +1,10 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Livewire\Admin\Role;
+namespace SujanSht\AdminMaster\Http\Livewire\Admin\Role;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Models\Admin\Role;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Blade;
 
@@ -37,7 +37,7 @@ class RoleTable extends DataTableComponent
                 ->collapseOnTablet(),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="roles" :show="true" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-admin-master-action :model="$model" route="roles" :show="true" />', ['model' => $row])
                 )
                 ->html(),
         ];

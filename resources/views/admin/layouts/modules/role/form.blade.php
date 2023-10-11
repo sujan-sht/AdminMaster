@@ -15,6 +15,6 @@
         @enderror
     </div>
     <div class="row">
-        <x-lara-admin-add-edit-button :model="$role ?? ''" name="role"></x-add-edit-button>
+        <x-admin-master-add-edit-button :model="$role ?? ''" name="role"></x-add-edit-button>
     </div>
 </div>

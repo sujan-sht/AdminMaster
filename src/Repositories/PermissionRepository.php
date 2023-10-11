@@ -1,11 +1,11 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Repositories;
+namespace SujanSht\AdminMaster\Repositories;
 
-use SujanSht\LaraAdmin\Models\Admin\Permission;
-use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Requests\PermissionRequest;
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Models\Admin\Permission;
+use SujanSht\AdminMaster\Contracts\PermissionRepositoryInterface;
+use SujanSht\AdminMaster\Http\Requests\PermissionRequest;
+use SujanSht\AdminMaster\Models\Admin\Role;
 
 class PermissionRepository implements PermissionRepositoryInterface
 {

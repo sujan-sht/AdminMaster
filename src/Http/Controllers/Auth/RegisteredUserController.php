@@ -1,11 +1,11 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
+namespace SujanSht\AdminMaster\Http\Controllers\Auth;
 
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Models\Admin\Role;
 use App\Models\User;
-use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
+use SujanSht\AdminMaster\Providers\AdminMasterServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -21,7 +21,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('lara-admin::auth.register');
+        return view('admin-master::auth.register');
     }
 
     /**
@@ -51,6 +51,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(LaraAdminServiceProvider::HOME);
+        return redirect(AdminMasterServiceProvider::HOME);
     }
 }

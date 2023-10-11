@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Exceptions;
+namespace SujanSht\AdminMaster\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;

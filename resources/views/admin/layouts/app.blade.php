@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    @include('lara-admin::admin.layouts.components.assets.meta')
+    @include('admin-master::admin.layouts.components.assets.meta')
 
 
-    @include('lara-admin::admin.layouts.components.assets.links')
+    @include('admin-master::admin.layouts.components.assets.links')
 
 </head>
 <body>
@@ -13,9 +13,9 @@
    <!-- Begin page -->
    <div class="wrapper">
 
-    @include('lara-admin::admin.layouts.components.topbar')
+    @include('admin-master::admin.layouts.components.topbar')
 
-    @include('lara-admin::admin.layouts.components.sidebar')
+    @include('admin-master::admin.layouts.components.sidebar')
 
 
     <!-- ============================================================== -->
@@ -36,7 +36,7 @@
         </div>
         <!-- content -->
 
-        @include('lara-admin::admin.layouts.components.footer')
+        @include('admin-master::admin.layouts.components.footer')
 
     </div>
 
@@ -553,7 +553,7 @@
     </div>
 </div>
 
-    @include('lara-admin::admin.layouts.components.assets.scripts')
+    @include('admin-master::admin.layouts.components.assets.scripts')
 
 
 

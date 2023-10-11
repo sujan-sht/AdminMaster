@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Livewire\Admin\User;
+namespace SujanSht\AdminMaster\Http\Livewire\Admin\User;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Blade;
@@ -36,7 +36,7 @@ class UserTable extends DataTableComponent
                 ->searchable(),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="users" :show="false" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-admin-master-action :model="$model" route="users" :show="false" />', ['model' => $row])
                 )
                 ->html(),
         ];

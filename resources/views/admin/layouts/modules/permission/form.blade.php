@@ -27,7 +27,7 @@
         <input type="checkbox" name="can" value="1" {{isset($permission) ? ($permission->can==1 ? 'checked' : '') : ''}}>
     </div>
     <div class="row">
-        <x-lara-admin-add-edit-button :model="$model ?? ''" name="permission"></x-add-edit-button>
+        <x-admin-master-add-edit-button :model="$model ?? ''" name="permission"></x-add-edit-button>
     </div>
 </div>
 

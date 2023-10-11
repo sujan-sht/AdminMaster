@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\View\Components;
+namespace SujanSht\AdminMaster\View\Components;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;

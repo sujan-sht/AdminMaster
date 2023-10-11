@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    @include('lara-admin::admin.layouts.components.assets.meta')
+    @include('admin-master::admin.layouts.components.assets.meta')
 
-    @include('lara-admin::admin.layouts.components.assets.links')
+    @include('admin-master::admin.layouts.components.assets.links')
 
 </head>
 
@@ -16,7 +16,7 @@
             <div class="align-items-center d-flex h-100">
                 <div class="card-body">
 
-                    @include('lara-admin::auth.components.logo')
+                    @include('admin-master::auth.components.logo')
 
 
                     <!-- title-->
@@ -98,7 +98,7 @@
                 <p class="lead"><i class="mdi mdi-format-quote-open"></i> It's a elegent templete. I love it very much! . <i class="mdi mdi-format-quote-close"></i>
                 </p>
                 <p>
-                    - LaraAdmin Admin User
+                    - AdminMaster Admin User
                 </p>
             </div> <!-- end auth-user-testimonial-->
         </div>
@@ -106,7 +106,7 @@
     </div>
 
 
-    @include('lara-admin::admin.layouts.components.assets.scripts')
+    @include('admin-master::admin.layouts.components.assets.scripts')
 
 
 

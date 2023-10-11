@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\LaraAdmin\View\Components;
+namespace SujanSht\AdminMaster\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -30,6 +30,6 @@ class Action extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('lara-admin::components.action');
+        return view('admin-master::components.action');
     }
 }

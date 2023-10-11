@@ -1,10 +1,10 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Http\Controllers\Auth;
+namespace SujanSht\AdminMaster\Http\Controllers\Auth;
 
-use SujanSht\LaraAdmin\Http\Controllers\Controller;
-use SujanSht\LaraAdmin\Http\Requests\Auth\LoginRequest;
-use SujanSht\LaraAdmin\Providers\LaraAdminServiceProvider;
+use SujanSht\AdminMaster\Http\Controllers\Controller;
+use SujanSht\AdminMaster\Http\Requests\Auth\LoginRequest;
+use SujanSht\AdminMaster\Providers\AdminMasterServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +17,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('lara-admin::auth.login');
+        return view('admin-master::auth.login');
     }
 
     /**
@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(LaraAdminServiceProvider::HOME);
+        return redirect()->intended(AdminMasterServiceProvider::HOME);
 
     }
 

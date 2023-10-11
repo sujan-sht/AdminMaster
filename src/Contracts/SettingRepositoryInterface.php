@@ -1,10 +1,10 @@
 <?php
 
-namespace SujanSht\LaraAdmin\Contracts;
+namespace SujanSht\AdminMaster\Contracts;
 
 use Illuminate\Http\Request;
-use SujanSht\LaraAdmin\Models\Admin\Setting;
-use SujanSht\LaraAdmin\Http\Requests\SettingRequest;
+use SujanSht\AdminMaster\Models\Admin\Setting;
+use SujanSht\AdminMaster\Http\Requests\SettingRequest;
 
 interface SettingRepositoryInterface
 {
