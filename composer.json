@@ -26,6 +26,8 @@
         "orchestra/testbench": "^8.0",
         "phpunit/phpunit": "^9.0"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "SujanSht\\AdminMaster\\": "src",
