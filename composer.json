@@ -58,7 +58,8 @@
             ]
         },
         "branch-alias": {
-            "dev-main": "1.0.x-dev"
+            "dev-main": "1.0.x-dev",
+            "dev": "dev-main"
         }
     },
     "minimum-stability": "dev",
