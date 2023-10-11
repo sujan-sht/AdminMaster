@@ -1,6 +1,6 @@
 <?php
 
-namespace SujanSht\AdminMaster\Http\Controllers\admin;
+namespace SujanSht\AdminMaster\Http\Controllers\Admin;
 
 use SujanSht\AdminMaster\Http\Controllers\Controller;
 use Illuminate\Http\Request;
