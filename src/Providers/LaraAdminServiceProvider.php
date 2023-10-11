@@ -44,6 +44,8 @@ use SujanSht\LaraAdmin\Contracts\PermissionRepositoryInterface;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\BreadPermission;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Setting\SettingTable;
 use SujanSht\LaraAdmin\Console\Commands\RepositoryPatternGenerator;
+use SujanSht\LaraAdmin\Http\Livewire\Admin\Media\SpartanImageUpload;
+use SujanSht\LaraAdmin\Http\Livewire\Admin\Media\VideoLink;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Permission\PermissionTable;
 use SujanSht\LaraAdmin\Http\Livewire\Admin\Role\RoleHasPermissionTable;
 
@@ -112,6 +114,10 @@ class LaraAdminServiceProvider extends ServiceProvider
     protected function publishResource()
     {
 
+        // Publish Config File
+        $this->publishes([
+            __DIR__.'/../../config/lara-admin.php' => config_path('lara-admin.php'),
+        ], 'lara-admin-config');
         // Publish View Files
         $this->publishes([
             __DIR__.'/../../resources/views' => resource_path('views/vendor/lara-admin'),
@@ -234,7 +240,6 @@ class LaraAdminServiceProvider extends ServiceProvider
             EditPage::class,
             IndexPage::class,
             ShowPage::class,
-            ImageUpload::class,
 
         ]);
     }
@@ -263,6 +268,10 @@ class LaraAdminServiceProvider extends ServiceProvider
         Livewire::component('admin.role.bread-permission', BreadPermission::class);
         Livewire::component('admin.role.role-has-permission-table', RoleHasPermissionTable::class);
         Livewire::component('admin.setting.setting-table', SettingTable::class);
+        Livewire::component('admin.media.spartan-image-upload', SpartanImageUpload::class);
+        Livewire::component('admin.media.video-link', VideoLink::class);
+
+
 
     }
 

@@ -1,7 +1,10 @@
 <!-- App favicon -->
-<link rel="shortcut icon" href="{{asset('lara-admin/assets/images/favicon.ico')}}">
+<link rel="shortcut icon" href="{{favicon()}}">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/> --}}
+
+<link rel="stylesheet" href="{{asset('lara-admin/assets/dist/fontawesome-5.11.2/css/all.min.css')}}">
+<link rel="stylesheet" href="{{asset('lara-admin/assets/dist/iconpicker-1.5.0.css')}}">
 
 <link rel="stylesheet" href="{{asset('lara-admin/assets/vendor/jquery-toast-plugin/jquery.toast.min.css')}}"/>
 <!-- Select2 css -->
@@ -11,7 +14,6 @@
 <link href="{{asset('lara-admin/assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" type="text/css" />
 
 
-<link rel="stylesheet" href="{{asset('lara-admin/assets/css/dropzone.css')}}" type="text/css" />
 <!-- Daterangepicker css -->
 <link rel="stylesheet" href="{{asset('lara-admin/assets/vendor/daterangepicker/daterangepicker.css')}}">
 
@@ -20,7 +22,6 @@
 
 <link rel="stylesheet" href="{{asset('lara-admin/assets/css/custom.css')}}" />
 
-<link rel="stylesheet" href="{{asset('lara-admin/assets/css/fontawesome-browser.css')}}" />
 
 <!-- Theme Config Js -->
 <script src="{{asset('lara-admin/assets/js/hyper-config.js')}}"></script>

@@ -17,7 +17,7 @@ class Menu extends Model
 
     public function scopePosition($query)
     {
-        return $query->orderBy('position', 'desc');
+        return $query->orderBy('position', 'asc');
     }
 
     public function scopeActive($query)

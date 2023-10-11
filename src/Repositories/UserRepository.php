@@ -3,17 +3,21 @@
 namespace SujanSht\LaraAdmin\Repositories;
 
 use App\Models\User;
-use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
-use SujanSht\LaraAdmin\Http\Requests\UserRequest;
-use SujanSht\LaraAdmin\Models\Admin\Role;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Cache;
+use SujanSht\LaraAdmin\Models\Admin\Role;
+use SujanSht\LaraAdmin\Http\Requests\UserRequest;
+use SujanSht\LaraAdmin\Contracts\UserRepositoryInterface;
 
 class UserRepository implements UserRepositoryInterface
 {
     // User Index
     public function indexUser()
     {
-        $users = User::all();
+        $users = Cache::has('users') ? Cache::get('users') : Cache::rememberForever('users', function () {
+            return User::latest()->get();
+        });
+
         return compact('users');
     }
 

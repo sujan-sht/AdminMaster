@@ -4,7 +4,7 @@
     <!-- Logo Light -->
     <a href="{{route('dashboard')}}" class="logo logo-light">
         <span class="logo-lg">
-            <img src="{{asset('lara-admin/assets/images/logo.png')}}" alt="logo" height="22">
+            <img src="{{logo()}}" alt="{{title()}}" height="80" width="80%">
         </span>
         <span class="logo-sm">
             <img src="{{asset('lara-admin/assets/images/logo-sm.png')}}" alt="small logo" height="22">
@@ -27,7 +27,7 @@
     </button>
 
     <!-- Sidebar -left -->
-    <div class="h-100" id="leftside-menu-container" data-simplebar>
+    <div class="h-100 mt-3" id="leftside-menu-container" data-simplebar>
         <!-- Leftbar User -->
         <div class="leftbar-user">
             <a href="pages-profile.html">

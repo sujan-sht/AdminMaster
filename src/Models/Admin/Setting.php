@@ -61,5 +61,20 @@ class Setting extends Model
         ][$attribute];
     }
 
-
+    public function getValueAttribute()
+    {
+        if ($this->getRawOriginal('setting_type') == Setting::STRING || $this->getRawOriginal('setting_type') == Setting::IMAGE) {
+            return $this->string_value;
+        } elseif ($this->getRawOriginal('setting_type') ==  Setting::INTEGER || $this->getRawOriginal('setting_type') == Setting::CHECKBOX || $this->getRawOriginal('setting_type') == Setting::SELECT) {
+            return $this->integer_value;
+        } elseif ($this->getRawOriginal('setting_type') == Setting::TEXT || $this->getRawOriginal('setting_type') == Setting::TEXTEDITOR ) {
+            return $this->text_value;
+        } elseif ($this->getRawOriginal('setting_type') == Setting::SWITCH) {
+            return $this->boolean_value;
+        } elseif ($this->getRawOriginal('setting_type') == Setting::MULTIPLE || $this->getRawOriginal('setting_type') == Setting::TAG) {
+            return $this->setting_json;
+        } else {
+            return null;
+        }
+    }
 }

@@ -1,10 +1,16 @@
+
  <!-- Vendor js -->
  <script src="{{asset('lara-admin/assets/js/vendor.min.js')}}"></script>
 
- <script src="{{asset('lara-admin/assets/vendor/highlightjs/highlight.pack.min.js')}}"></script>
- <script src="{{asset('lara-admin/assets/js/hyper-syntax.js')}}"></script>
+ {{-- <script src="{{asset('lara-admin/assets/vendor/highlightjs/highlight.pack.min.js')}}"></script> --}}
+ {{-- <script src="{{asset('lara-admin/assets/js/hyper-syntax.js')}}"></script> --}}
+
+ <script src="{{asset('lara-admin/assets/vendor/daterangepicker/moment.min.js')}}"></script>
+<script src="{{asset('lara-admin/assets/vendor/daterangepicker/daterangepicker.js')}}"></script>
 
 <script src="{{asset('lara-admin/assets/js/spartan/spartan-multi-image-picker-min.js')}}"></script>
+
+<script src="{{ asset('lara-admin/assets/js/ckeditor/ckeditor.js') }}"></script>
 
 
  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
@@ -13,20 +19,10 @@
  <!--  Select2 Plugin Js -->
  <script src="{{asset('lara-admin/assets/vendor/select2/js/select2.min.js')}}"></script>
 
- <script src="{{asset('lara-admin/assets/vendor/datatables.net/js/jquery.dataTables.min.js')}}"></script>
- <script src="{{asset('lara-admin/assets/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js')}}"></script>
+<!-- Apex Charts js -->
+<script src="{{asset('lara-admin/assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
 
-<!-- Datatable Init js -->
-<script src="{{asset('lara-admin/assets/js/pages/demo.datatable-init.js')}}"></script>
- <!-- Daterangepicker js -->
- {{-- <script src="{{asset('lara-admin/assets/vendor/daterangepicker/moment.min.js')}}"></script> --}}
- {{-- <script src="{{asset('lara-admin/assets/vendor/daterangepicker/daterangepicker.js')}}"></script> --}}
-
- <!-- Apex Charts js -->
- {{-- <script src="{{asset('lara-admin/assets/vendor/apexcharts/apexcharts.min.js')}}"></script> --}}
-
-<script src="{{asset('lara-admin/assets/js/fontawesome-browser.js')}}"></script>
-
+<script src="{{asset('lara-admin/assets/dist/iconpicker-1.5.0.js')}}"></script>
 
  <!-- Vector Map js -->
  <script src="{{asset('lara-admin/assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
@@ -96,5 +92,29 @@
   });
   </script>
 
+<script>
+    // Font Selector
+    IconPicker.Init({
+        jsonUrl: "{{ asset('lara-admin/assets/dist/iconpicker-1.5.0.json') }}",
+        searchPlaceholder: 'Search Icon',
+        showAllButton: 'Show All',
+        cancelButton: 'Cancel',
+        noResultsFound: 'No results found.',
+        borderRadius: '20px',
+    });
+
+    IconPicker.Run('#iconPicker');
+</script>
+<script>
+    ClassicEditor
+	.create( document.querySelector( '#ckeditor' ), {
+	} )
+	.catch( error => {
+		console.error = error;
+	} );
+</script>
+
  @livewireScripts
+<script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>
+
  @stack('livewire_third_party')

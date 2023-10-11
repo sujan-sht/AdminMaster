@@ -79,7 +79,7 @@ class MenuTable extends DataTableComponent
             BooleanColumn::make('Active', 'active'),
             Column::make("Action")
                 ->label(
-                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="menus" :show="true" />', ['model' => $row])
+                    fn ($row) => Blade::render('<x-lara-admin-action :model="$model" route="menus" :show="false" />', ['model' => $row])
                 )
                 ->html(),
         ];

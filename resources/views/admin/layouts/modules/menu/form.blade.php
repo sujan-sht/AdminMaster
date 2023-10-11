@@ -1,7 +1,8 @@
 <div class="row">
     <div class="col-md-6 mb-3">
         <label for="name">Model Name</label><span class="text-danger">*</span>
-        <input type="text" name="name" class="form-control" value="{{$menu->name ?? old('name')}}" placeholder="Enter Full Name">
+        {{-- <input type="text" name="name" class="form-control" value="{{$menu->name ?? old('name')}}" placeholder="Enter Full Name"> --}}
+        <input type="text" id="example-readonly" name="name" class="form-control" {{isset($menu) ? 'readonly=""' : ''}} value="{{$menu->name ?? old('name')}}">
         @error('name')
             <span class="text-danger">{{$message}}</span>
         @enderror
@@ -19,10 +20,14 @@
 
     <div class="col-md-6 mb-3">
         <label for="icon">Menu Icon</label>
-        <input type="text" name="icon" class="form-control" placeholder="Select icon" data-fa-browser value="{{$menu->icon ?? old('icon')}}"/>
-       @error('icon')
-            <span class="text-danger">{{$message}}</span>
-        @enderror
+        <div class="input-group">
+            <span class="input-group-text"><i id="showIcon" class="fa fa-concierge-bell"></i></span>
+            <button type="button" class="btn btn-primary" id="iconPicker" data-iconpicker-input="#icon"
+                data-iconpicker-preview="#showIcon">Select
+                Icon</button>
+            <input type="hidden" name="icon" id="icon"
+                value="{{ $menu->icon ?? (old('icon') ?? 'fa fa-concierge-bell') }}">
+        </div>
     </div>
     <div class="row">
         <x-lara-admin-add-edit-button :model="$menu ?? ''" name="menu"></x-add-edit-button>

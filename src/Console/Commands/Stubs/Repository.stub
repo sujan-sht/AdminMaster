@@ -5,13 +5,17 @@ namespace App\Repositories;
 use App\Models\Admin\modelName;
 use App\Contracts\modelNameRepositoryInterface;
 use App\Http\Requests\modelNameRequest;
+use Illuminate\Support\Facades\Cache;
 
 class modelNameRepository implements modelNameRepositoryInterface
 {
     // modelName Index
     public function indexmodelName()
     {
-        $pluralModelName = modelName::all();
+        $pluralModelName = Cache::has('pluralModelName') ? Cache::get('pluralModelName') : Cache::rememberForever('pluralModelName', function () {
+            return modelName::latest()->get();
+        });
+
         return compact('pluralModelName');
     }
 

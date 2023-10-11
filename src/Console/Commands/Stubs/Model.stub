@@ -4,10 +4,34 @@ namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class modelName extends Model
+class modelName extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia;
 
     protected $guarded = [];
+
+    // Forget cache on updating or saving and deleting
+    public static function boot()
+    {
+        parent::boot();
+
+        static::saving(function () {
+            self::cacheKey();
+        });
+
+        static::deleting(function () {
+            self::cacheKey();
+        });
+    }
+
+    // Cache Keys
+    private static function cacheKey()
+    {
+        Cache::has('pluralModelName') ? Cache::forget('pluralModelName') : '';
+    }
+
 }

@@ -265,6 +265,12 @@
             </li> --}}
 
             <li class="notification-list d-none d-sm-inline-block">
+                <a class="btn btn-success" href="{{route('website.home')}}" target="_blank" style="margin:17px 0px;">
+                    Website
+                </a>
+            </li>
+
+            <li class="notification-list d-none d-sm-inline-block">
                 <a class="nav-link" data-bs-toggle="offcanvas" href="#theme-settings-offcanvas">
                     <i class="ri-settings-3-line noti-icon"></i>
                 </a>
@@ -305,7 +311,7 @@
                     </a>
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <a href="{{route('settings.index')}}" class="dropdown-item notify-item">
                         <i class="mdi mdi-account-edit me-1"></i>
                         <span>Settings</span>
                     </a>

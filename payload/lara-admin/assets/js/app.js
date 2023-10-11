@@ -664,8 +664,8 @@ class ThemeCustomizer {
 
     setSwitchFromConfig() {
 
-        sessionStorage.setItem('__HYPER_CONFIG__', JSON.stringify(this.config));
-        // localStorage.setItem('__HYPER_CONFIG__', JSON.stringify(this.config));
+        sessionStorage.setItem('__ADMIN_CONFIG__', JSON.stringify(this.config));
+        // localStorage.setItem('__ADMIN_CONFIG__', JSON.stringify(this.config));
 
         document.querySelectorAll('.right-bar input[type=checkbox]').forEach(function (checkbox) {
             checkbox.checked = false;

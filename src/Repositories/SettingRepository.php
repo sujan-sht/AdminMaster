@@ -95,7 +95,7 @@ class SettingRepository implements SettingRepositoryInterface
         } elseif ($setting->getRawOriginal('setting_type') == Setting::TAG) {
             return 'sometimes';
         } elseif ($setting->getRawOriginal('setting_type') == Setting::IMAGE) {
-            return 'image|file|max:3000';
+            return 'image|file|max:20000';
         }
     }
 

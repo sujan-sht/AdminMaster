@@ -100,3 +100,6 @@
         </x-slot>
     </x-lara-admin-index-page>
 @endsection
+@section('scripts')
+@include('lara-admin::admin.layouts.modules.setting.scripts')
+@endsection

@@ -43,14 +43,7 @@
             <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
-    <div class="col-md-6 mb-3">
 
-        <label for="image">Image</label>
-
-        <x-lara-admin-image-upload id="user_image" class="col-md-6 mb-3" :model="$user ?? ''" imageName="user"></x-image-upload>
-
-
-    </div>
 
     <div class="row">
         <x-lara-admin-add-edit-button :model="$user ?? ''" name="user"></x-add-edit-button>

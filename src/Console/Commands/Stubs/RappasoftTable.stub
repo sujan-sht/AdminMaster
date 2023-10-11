@@ -6,15 +6,69 @@ use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\Admin\modelName;
 use Illuminate\Support\Facades\Blade;
+use Rappasoft\LaravelLivewireTables\Views\Filters\SelectFilter;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class modelNameTable extends DataTableComponent
 {
-    protected $model = modelName::class;
+    public function builder(): Builder
+    {
+        return modelName::query()
+            ->orderBy('position'); // Eager load anything; // Select some things
+    }
+
+    public array $bulkActions = [
+        'bulkDelete' => 'Bulk Delete',
+    ];
+
+    public function bulkDelete()
+    {
+        $pluralModelName = modelName::whereIn('id', $this->getSelected())->get();
+        foreach ($pluralModelName as $lowercaseModelName) {
+            $lowercaseModelName->delete();
+        }
+    }
+
+    public function filters(): array
+    {
+        return [
+            SelectFilter::make('Active')
+                ->options([
+                    '' => 'All',
+                    '1' => 'Active',
+                    '0' => 'Inactive',
+                ])
+                ->filter(function (Builder $builder, string $value) {
+                    if ($value === '1') {
+                        $builder->where('active', true);
+                    } elseif ($value === '0') {
+                        $builder->where('active', false);
+                    }
+                })
+        ];
+    }
 
     public function configure(): void
     {
         $this->setPrimaryKey('id');
+
+        $this->setEagerLoadAllRelationsEnabled();
+
+        $this->setEmptyMessage('No pluralModelName found');
+
+        $this->setReorderStatus(true);
+
+        $this->setDefaultReorderSort('position', 'asc');
     }
+
+    public function reorder($items): void
+    {
+        foreach ($items as $item) {
+            modelName::find((int) $item['value'])->update(['position' => (int) $item['order']]);
+        }
+    }
+
 
     public function columns(): array
     {
