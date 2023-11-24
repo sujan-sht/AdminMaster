@@ -49,47 +49,64 @@
                     <span> Dashboard </span>
                 </a>
             </li>
+            @if(auth()->user()->can('view-any', \App\Models\User::class))
+
             <li class="side-nav-item">
                 <a href="{{route('users.index')}}" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Users </span>
                 </a>
             </li>
+            @endif
+            @if(auth()->user()->can('view-any', \SujanSht\AdminMaster\Models\Admin\Role::class))
             <li class="side-nav-item">
                 <a href="{{route('roles.index')}}" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Roles </span>
                 </a>
             </li>
+            @endif
+            @if(auth()->user()->can('view-any', \SujanSht\AdminMaster\Models\Admin\Permission::class))
+
             <li class="side-nav-item">
                 <a href="{{route('permissions.index')}}" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Permissions </span>
                 </a>
             </li>
+            @endif
+            @if(auth()->user()->can('view-any', \SujanSht\AdminMaster\Models\Admin\Setting::class))
+
             <li class="side-nav-item">
                 <a href="{{route('settings.index')}}" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Settings </span>
                 </a>
             </li>
+            @endif
+            @if(auth()->user()->can('view-any', \SujanSht\AdminMaster\Models\Admin\Menu::class))
+
             <li class="side-nav-item">
                 <a href="{{route('menus.index')}}" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Menus </span>
                 </a>
             </li>
+            @endif
             <li class="side-nav-title side-nav-item">Other Modules</li>
             @if (!is_null(adminMenus()))
                 @foreach (adminMenus() as $menu)
-                <li class="side-nav-item">
-                    <a href="{{route($menu->route.'.index')}}" class="side-nav-link">
-                        <i class="{{$menu->icon}}"></i>
-                        <span> {{$menu->name}} </span>
-                    </a>
-                </li>
+                    @if(auth()->user()->can('view-any', 'App\Models\Admin\\'.$menu->name))
+                        <li class="side-nav-item">
+                            <a href="{{route($menu->route.'.index')}}" class="side-nav-link">
+                                <i class="{{$menu->icon}}"></i>
+                                <span> {{$menu->name}} </span>
+                            </a>
+                        </li>
+                    @endif
                 @endforeach
             @endif
+            @includeFirst(['admin.layouts.components.sidebar','admin-master::admin.layouts.components.sidebar'])
 
         </ul>
         <!--- End Sidemenu -->

@@ -7,17 +7,19 @@
                         <div class="{{$class}}">
                             <div class="img-upload-preview">
                                 <img loading="lazy"  src="{{ $image->getUrl() }}" alt="{{$image->file_name}}" class="img-responsive" style="max-height:{{$height}};">
-                                <button type="button" class="btn btn-danger close-btn remove-files"><i class="fa fa-times"></i></button>
+                                <input type="hidden" name="previous_photos[]" value="{{ $image->id }}">
+                                <button type="button" class="btn btn-danger close-btn remove-files" ><i class="fa fa-times"></i></button>
                             </div>
                         </div>
                     @endforeach
-
                 @endif
             @else
                 @if ($model->$imageName)
                 <div class="{{$class}}">
                     <div class="img-upload-preview">
                         <img loading="lazy"  src="{{ $model->$imageName }}" alt="{{$model->getFirstMedia($imageName)->file_name}}" class="img-responsive" style="max-height:{{$height}};">
+                        <input type="hidden" name="previous_photos[]" value="{{$model->getFirstMedia($imageName)->id}}">
+
                         <button type="button" class="btn btn-danger close-btn remove-files"><i class="fa fa-times"></i></button>
                     </div>
                 </div>
@@ -48,7 +50,7 @@
                 }
             });
 
-            $('.remove-files').on('click', function(){
+            $('.remove-files').on('click', function() {
                 $(this).parents(".img-upload-preview").remove();
             });
         });

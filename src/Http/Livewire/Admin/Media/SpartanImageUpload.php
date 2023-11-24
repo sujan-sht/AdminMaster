@@ -2,7 +2,9 @@
 
 namespace SujanSht\AdminMaster\Http\Livewire\Admin\Media;
 
+use Log;
 use Livewire\Component;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class SpartanImageUpload extends Component
 {
@@ -15,8 +17,11 @@ class SpartanImageUpload extends Component
     public $imageCount=10;
     public $model;
 
+
+
     public function render()
     {
         return view('admin-master::livewire.admin.media.spartan-image-upload');
     }
+
 }

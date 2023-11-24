@@ -1,4 +1,4 @@
-@extends('admin-master::admin.layouts.app')
+@extends(request()->header('layout') ?? 'admin-master::admin.layouts.app')
 
 @section('content')
 

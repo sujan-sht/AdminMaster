@@ -86,11 +86,6 @@
     @endif
 
 </script>
-<script>
-    $(function($) {
-      $.fabrowser();
-  });
-  </script>
 
 <script>
     // Font Selector
