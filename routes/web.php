@@ -10,7 +10,7 @@ use SujanSht\AdminMaster\Http\Controllers\Admin\MenuController;
 use SujanSht\AdminMaster\Http\Controllers\Admin\RoleController;
 use SujanSht\AdminMaster\Http\Controllers\Admin\UserController;
 use SujanSht\AdminMaster\Http\Controllers\Auth\PasswordController;
-use SujanSht\AdminMaster\Http\Controllers\admin\DashboardController;
+use SujanSht\AdminMaster\Http\Controllers\Admin\DashboardController;
 use SujanSht\AdminMaster\Http\Controllers\Admin\PermissionController;
 use SujanSht\AdminMaster\Http\Controllers\Admin\SettingController;
 

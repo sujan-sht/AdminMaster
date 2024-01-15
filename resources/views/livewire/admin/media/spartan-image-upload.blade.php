@@ -15,6 +15,7 @@
                 @endif
             @else
                 @if ($model->$imageName)
+                @if(!is_null($model->getFirstMedia($imageName)))
                 <div class="{{$class}}">
                     <div class="img-upload-preview">
                         <img loading="lazy"  src="{{ $model->$imageName }}" alt="{{$model->getFirstMedia($imageName)->file_name}}" class="img-responsive" style="max-height:{{$height}};">
@@ -23,6 +24,8 @@
                         <button type="button" class="btn btn-danger close-btn remove-files"><i class="fa fa-times"></i></button>
                     </div>
                 </div>
+                @endif
+
                 @endif
             @endif
 
