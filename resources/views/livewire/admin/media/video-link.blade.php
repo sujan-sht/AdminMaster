@@ -29,6 +29,7 @@
                 </div>
             </div>
 
+
             @if (!is_null($video))
                 <br>
                 <div class="row">
