@@ -56,7 +56,7 @@
             "providers": [
                 "SujanSht\\AdminMaster\\Providers\\AdminMasterServiceProvider"
             ]
-        },
+        }
         
     }
 }
