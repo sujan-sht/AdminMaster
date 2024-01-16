@@ -12,7 +12,7 @@ class VideoLink extends Component
     public function mount($model = null)
     {
         $this->model = $model;
-        if(!is_null($model)){
+        if (!is_null($model)) {
             $this->videos = $model->videos()->pluck('url');
         }
     }
@@ -27,12 +27,20 @@ class VideoLink extends Component
     public function removeVideo($index)
     {
         $videos = $this->videos;
-        unset($videos[$index]);
-        $this->videos = $videos;
+
+        if (count($videos) > 1) {
+            unset($videos[$index]);
+            $this->videos = $videos;
+        } else {
+            $this->model->videos()->delete();
+            $this->videos = null;
+        }
     }
+
 
     public function removeAllVideo()
     {
+        $this->model->videos()->delete();
         $this->videos = null;
     }
 
@@ -40,5 +48,4 @@ class VideoLink extends Component
     {
         return view('admin-master::livewire.admin.media.video-link');
     }
-
 }
