@@ -24,4 +24,9 @@ class SpartanImageUpload extends Component
         return view('admin-master::livewire.admin.media.spartan-image-upload');
     }
 
+    public function removeImage(Media $media, $collection = null)
+    {
+        $media->delete();
+        $this->model = null;
+    }
 }

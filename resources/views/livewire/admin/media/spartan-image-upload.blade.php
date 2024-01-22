@@ -8,7 +8,7 @@
                             <div class="img-upload-preview">
                                 <img loading="lazy"  src="{{ $image->getUrl() }}" alt="{{$image->file_name}}" class="img-responsive" style="max-height:{{$height}};">
                                 <input type="hidden" name="previous_photos[]" value="{{ $image->id }}">
-                                <button type="button" class="btn btn-danger close-btn remove-files" ><i class="fa fa-times"></i></button>
+                                <button type="button" wire:click="removeImage({{ $image->id }})" class="btn btn-danger close-btn remove-files" ><i class="fa fa-times"></i></button>
                             </div>
                         </div>
                     @endforeach
@@ -21,15 +21,15 @@
                         <img loading="lazy"  src="{{ $model->$imageName }}" alt="{{$model->getFirstMedia($imageName)->file_name}}" class="img-responsive" style="max-height:{{$height}};">
                         <input type="hidden" name="previous_photos[]" value="{{$model->getFirstMedia($imageName)->id}}">
 
-                        <button type="button" class="btn btn-danger close-btn remove-files"><i class="fa fa-times"></i></button>
+                        <button type="button" wire:click="removeImage({{ $model->getFirstMedia($imageName)->id }})" class="btn btn-danger close-btn remove-files"><i class="fa fa-times"></i></button>
                     </div>
                 </div>
                 @endif
 
                 @endif
             @endif
- 
-            
+
+
 
         @endif
     </div>

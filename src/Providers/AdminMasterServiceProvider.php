@@ -27,7 +27,6 @@ use SujanSht\AdminMaster\View\Components\CreatePage;
 use SujanSht\AdminMaster\Repositories\MenuRepository;
 use SujanSht\AdminMaster\Repositories\RoleRepository;
 use SujanSht\AdminMaster\Repositories\UserRepository;
-use SujanSht\AdminMaster\View\Components\ImageUpload;
 use SujanSht\AdminMaster\View\Components\AddEditButton;
 use SujanSht\AdminMaster\Console\Commands\CrudGenerator;
 use SujanSht\AdminMaster\Repositories\SettingRepository;
@@ -45,7 +44,6 @@ use SujanSht\AdminMaster\Http\Livewire\Admin\Role\BreadPermission;
 use SujanSht\AdminMaster\Http\Livewire\Admin\Setting\SettingTable;
 use SujanSht\AdminMaster\Console\Commands\RepositoryPatternGenerator;
 use SujanSht\AdminMaster\Http\Livewire\Admin\Media\SpartanImageUpload;
-use SujanSht\AdminMaster\Http\Livewire\Admin\Media\UploadImage;
 use SujanSht\AdminMaster\Http\Livewire\Admin\Media\VideoLink;
 use SujanSht\AdminMaster\Http\Livewire\Admin\Permission\PermissionTable;
 use SujanSht\AdminMaster\Http\Livewire\Admin\Role\RoleHasPermissionTable;
@@ -274,7 +272,6 @@ class AdminMasterServiceProvider extends ServiceProvider
         Livewire::component('admin.setting.setting-table', SettingTable::class);
         Livewire::component('admin.media.spartan-image-upload', SpartanImageUpload::class);
         Livewire::component('admin.media.video-link', VideoLink::class);
-        Livewire::component('admin.media.image-upload', UploadImage::class);
 
 
 
