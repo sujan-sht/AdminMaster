@@ -4,7 +4,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/sujan-sht/admin-master.svg?style=flat-square)](https://packagist.org/packages/sujan-sht/admin-master)
 ![GitHub Actions](https://github.com/sujan-sht/admin-master/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
 ## Installation
 
@@ -15,9 +14,9 @@ composer require sujan-sht/admin-master
 ```
 
 ## Usage
-
+You can Publish assets for the admin panel via:
 ```php
-// Usage description here
+php artisan vendor:publish –tag=admin-master-assets
 ```
 
 ### Testing
