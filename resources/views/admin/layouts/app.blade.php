@@ -3,19 +3,20 @@
 
 <head>
     @include('admin-master::admin.layouts.components.assets.meta')
-
-
+    
+    
     @include('admin-master::admin.layouts.components.assets.links')
-
+    
 </head>
 <body>
-
-   <!-- Begin page -->
-   <div class="wrapper">
-
-    @include('admin-master::admin.layouts.components.topbar')
-
-    @include('admin-master::admin.layouts.components.sidebar')
+    
+    <!-- Begin page -->
+    <div class="wrapper">
+        
+        @include('admin-master::admin.layouts.components.topbar')
+        
+        @include('admin-master::admin.layouts.components.sidebar')
+   
 
 
     <!-- ============================================================== -->

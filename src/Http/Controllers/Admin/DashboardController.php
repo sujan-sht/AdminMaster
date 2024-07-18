@@ -2,18 +2,20 @@
 
 namespace SujanSht\AdminMaster\Http\Controllers\Admin;
 
-use View;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 use SujanSht\AdminMaster\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
+
+
     public function dashboard()
     {
-        if(View::exists('admin.dashboard.index')){
+        if (View::exists('admin.dashboard.index')) {
             return view('admin.dashboard.index');
-        }else{
+        } else {
             return view('admin-master::admin.dashboard.index');
         }
     }
+
 }

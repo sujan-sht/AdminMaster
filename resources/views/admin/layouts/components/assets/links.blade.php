@@ -22,7 +22,7 @@
 
 <link rel="stylesheet" href="{{asset('admin-master/assets/css/custom.css')}}" />
 
-
+<link rel="stylesheet" href="{{asset('plugins/medialibrarypro/styles.css')}}" />
 <!-- Theme Config Js -->
 <script src="{{asset('admin-master/assets/js/hyper-config.js')}}"></script>
 

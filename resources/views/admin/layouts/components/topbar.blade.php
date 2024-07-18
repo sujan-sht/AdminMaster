@@ -265,7 +265,7 @@
             </li> --}}
 
             <li class="notification-list d-none d-sm-inline-block">
-                <a class="btn btn-success" href="{{route('website.home')}}" target="_blank" style="margin:17px 0px;">
+                <a class="btn btn-success" href="#" target="_blank" style="margin:17px 0px;">
                     Website
                 </a>
             </li>
@@ -292,7 +292,7 @@
                 <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                     aria-expanded="false">
                     <span class="account-user-avatar">
-                        <img src="{{Auth::user()->image}}" alt="{{Auth::user()->name}}" class="rounded-circle">
+                        {{-- <img src="{{Auth::user()->image}}" alt="{{Auth::user()->name}}" class="rounded-circle"> --}}
                     </span>
                     <span>
                         <span class="account-user-name">{{Auth::user()->name}}</span>
