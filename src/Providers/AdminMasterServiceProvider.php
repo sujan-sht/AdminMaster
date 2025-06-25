@@ -133,6 +133,7 @@ class AdminMasterServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../payload/admin-master/assets' => public_path('admin-master/assets'),
         ], 'admin-master-assets');
+        // Publish Media Library Modules
         $this->publishes([
             __DIR__.'/../../payload/modules' => app_path('Modules'),
         ], 'media-library-modules');
